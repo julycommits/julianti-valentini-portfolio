@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="./assets/mortgage-carousel-1.png" data-resource-id="imgMortgageCarousel1" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-feature-1.png" data-resource-id="imgMortgageFeature1" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-feature-2.png" data-resource-id="imgMortgageFeature2" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-feature-3.png" data-resource-id="imgMortgageFeature3" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-feature-4.png" data-resource-id="imgMortgageFeature4" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-feature-5.png" data-resource-id="imgMortgageFeature5" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-explore-coldstart.png" data-resource-id="imgMortgageExploreColdstart" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-explore-affordability.png" data-resource-id="imgMortgageExploreAffordability" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-explore-comparison.png" data-resource-id="imgMortgageExploreComparison" />
+<meta name="ext-resource-dependency" content="./assets/mortgage-explore-upload.png" data-resource-id="imgMortgageExploreUpload" />
+<meta name="ext-resource-dependency" content="./assets/console-carousel-1.png" data-resource-id="imgConsoleCarousel1" />
+<meta name="ext-resource-dependency" content="./assets/console-carousel-2.png" data-resource-id="imgConsoleCarousel2" />
+<meta name="ext-resource-dependency" content="./assets/console-carousel-3.png" data-resource-id="imgConsoleCarousel3" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-1.jpg" data-resource-id="imgWholesaleCarousel1" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-2.jpg" data-resource-id="imgWholesaleCarousel2" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-3.jpg" data-resource-id="imgWholesaleCarousel3" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-4.jpg" data-resource-id="imgWholesaleCarousel4" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-5.jpg" data-resource-id="imgWholesaleCarousel5" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-6.jpg" data-resource-id="imgWholesaleCarousel6" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-carousel-7.jpg" data-resource-id="imgWholesaleCarousel7" />
+<meta name="ext-resource-dependency" content="./assets/wholesale-thumb.jpg" data-resource-id="imgWholesaleThumb" />
+<meta name="ext-resource-dependency" content="./assets/fashion-carousel-3.png" data-resource-id="imgFashionCarousel3" />
+<meta name="ext-resource-dependency" content="./assets/fashion-carousel-1.png" data-resource-id="imgFashionCarousel1" />
+<meta name="ext-resource-dependency" content="./assets/fashion-carousel-2.png" data-resource-id="imgFashionCarousel2" />
+<meta name="ext-resource-dependency" content="./assets/fashion-carousel-6.png" data-resource-id="imgFashionCarousel6" />
+<meta name="ext-resource-dependency" content="./assets/fashion-carousel-5.png" data-resource-id="imgFashionCarousel5" />
+<meta name="ext-resource-dependency" content="./assets/fashion-carousel-4.png" data-resource-id="imgFashionCarousel4" />
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#f7f5f1">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#f7f5f1"/>
+<rect x="150" y="180" width="620" height="46" rx="4" fill="#141313"/>
+<rect x="150" y="250" width="480" height="46" rx="4" fill="#141313"/>
+<rect x="150" y="360" width="140" height="34" rx="17" fill="#141313"/>
+<rect x="310" y="360" width="220" height="34" rx="17" fill="none" stroke="#5c5c5c" stroke-width="2"/>
+<rect x="150" y="470" width="900" height="180" rx="16" fill="#ffffff" stroke="#e5e1d8" stroke-width="2"/>
+<rect x="170" y="490" width="420" height="140" rx="10" fill="#eee8df"/>
+</svg>
+</template>
+
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;background:#ffffff;font-family:'Urbanist',sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:#141313;text-decoration:none}
+    a:hover{color:#5c5c5c}
+  </style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;background:#ffffff">
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(20,19,19,0.1)">
+    <div style="max-width:960px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between">
+      <div style="font-size:14px;font-weight:600;letter-spacing:-0.35px;color:#141313;cursor:pointer">Julianti Valentini</div>
+      <nav style="display:flex;gap:28px">
+        <a style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#141313;cursor:pointer">Work</a>
+        <a style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#5c5c5c;cursor:pointer">About</a>
+        <a style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#5c5c5c;cursor:pointer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex:1">
+    <div style="max-width:960px;margin:0 auto;padding:40px">
+      <h1 style="font-size:48px;font-weight:600;line-height:1.15;color:#141313;margin:0;letter-spacing:-0.5px">I design the system,<br/>then I design what runs on it.</h1>
+    </div>
+
+    <div style="max-width:960px;margin:24px auto 0;padding:0 40px">
+      <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#5c5c5c;margin-bottom:14px">Category</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <sc-for list="{{ pills }}" as="pill" hint-placeholder-count="4">
+          <button onClick="{{ pill.onClick }}" style="padding:6px 16px;border-radius:999px;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;font-family:inherit;{{ pill.style }}">{{ pill.label }}</button>
+        </sc-for>
+      </div>
+      <div style="margin-top:24px;border-top:1px solid rgba(20,19,19,0.1)"></div>
+    </div>
+
+    <div style="max-width:960px;margin:0 auto;padding:40px 40px 96px;display:flex;flex-direction:column;gap:24px">
+      <sc-for list="{{ filtered }}" as="card" hint-placeholder-count="5">
+        <button onClick="{{ card.onClick }}" style="all:unset;display:flex;align-items:flex-start;width:100%;text-align:left;cursor:pointer;background:rgba(255,255,255,0.4);border:1px solid rgba(20,19,19,0.1);border-radius:16px;overflow:hidden;font-family:inherit" style-hover="box-shadow:0 4px 24px rgba(20,19,19,0.08)">
+          <div style="width:50%;flex-shrink:0;aspect-ratio:16/9;position:relative;overflow:hidden;background:#ffffff">
+            <sc-if value="{{ card.hasImage }}" hint-placeholder-val="{{ false }}">
+              <img ref="{{ card.imgRef }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block"/>
+            </sc-if>
+            <sc-if value="{{ card.comingSoon }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;background:#f7f5f1;display:flex;align-items:center;justify-content:center">
+                <span style="background:#eee8df;color:#8b7355;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;padding:4px 12px;border-radius:999px">Preview coming soon</span>
+              </div>
+            </sc-if>
+          </div>
+          <div style="width:50%;flex-shrink:0;min-width:0;padding:24px 32px;position:relative;box-sizing:border-box">
+            <span style="display:inline-block;background:#eee8df;color:#8b7355;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;padding:4px 12px;border-radius:999px">{{ card.tag }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:32px;right:32px;color:rgba(20,19,19,0.3)"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            <h2 style="font-size:24px;font-weight:600;line-height:1.25;color:#141313;margin:14px 0 0">{{ card.title }}</h2>
+            <p style="font-size:13px;color:#5c5c5c;line-height:1.625;margin:12px 0 0">{{ card.desc }}</p>
+            <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#141313;margin-top:16px">{{ card.company }}</div>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="min-height:100vh;background:#ffffff">
+    <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(20,19,19,0.1)">
+      <div style="max-width:960px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;gap:16px">
+        <button onClick="{{ goHome }}" style="all:unset;cursor:pointer;font-size:16px;color:#141313">←</button>
+        <div style="font-size:14px;font-weight:600;color:#141313">{{ d.title }}</div>
+      </div>
+    </header>
+
+    <div style="max-width:960px;margin:0 auto;padding:40px 40px 0">
+      <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#5c5c5c;margin-bottom:8px">Category</div>
+      <span style="display:inline-block;background:#eee8df;color:#8b7355;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;padding:4px 12px;border-radius:999px">{{ d.tag }}</span>
+    </div>
+
+    <div style="max-width:960px;margin:24px auto 0;padding:0 40px">
+      <div style="border-radius:16px;overflow:hidden;background:#f7f5f1;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center">
+        <sc-if value="{{ hasCarousel }}" hint-placeholder-val="{{ true }}">
+          <img src="{{ activeCarouselSrc }}" alt="" style="width:100%;height:100%;object-fit:contain"/>
+        </sc-if>
+        <sc-if value="{{ noCarousel }}" hint-placeholder-val="{{ false }}">
+          <span style="background:#eee8df;color:#8b7355;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;padding:4px 12px;border-radius:999px">Preview coming soon</span>
+        </sc-if>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <sc-for list="{{ carouselImgs }}" as="im" hint-placeholder-count="6">
+          <div onClick="{{ im.onClick }}" style="width:64px;height:36px;border-radius:6px;overflow:hidden;border:2px solid {{ im.borderColor }};flex-shrink:0;cursor:pointer">
+            <img ref="{{ im.ref }}" alt="" style="width:100%;height:100%;object-fit:cover"/>
+          </div>
+        </sc-for>
+      </div>
+      <h3 style="font-size:20px;font-weight:600;color:#141313;margin:20px 0 6px">{{ activeCaption }}</h3>
+      <p style="font-size:14px;color:#5c5c5c;line-height:1.625;margin:0">{{ activeCaptionDesc }}</p>
+
+      <sc-if value="{{ d.hasMeta }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(20,19,19,0.1)">
+          <sc-for list="{{ d.meta }}" as="m" hint-placeholder-count="3">
+            <div>
+              <div style="font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8b7355;margin-bottom:4px">{{ m.k }}</div>
+              <div style="font-size:13px;color:#141313;line-height:1.4">{{ m.v }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="max-width:960px;margin:0 auto;padding:0 40px;position:sticky;top:53px;background:rgba(255,255,255,0.95);z-index:40;margin-top:40px">
+      <div style="display:flex;gap:20px;overflow-x:auto;border-top:1px solid rgba(20,19,19,0.1);border-bottom:1px solid rgba(20,19,19,0.1);padding:14px 0">
+        <sc-for list="{{ d.tabs }}" as="tab" hint-placeholder-count="8">
+          <span style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c;white-space:nowrap">{{ tab }}</span>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="max-width:960px;margin:0 auto;padding:48px 40px 0;display:flex;flex-direction:column;gap:64px">
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Setup</h2>
+        <p style="font-size:15px;color:#141313;line-height:1.7;margin:0 0 16px">{{ d.setup.lead }}</p>
+        <sc-if value="{{ d.setup.subLead }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 12px">{{ d.setup.subLead }}</p>
+        </sc-if>
+        <ul style="margin:0 0 20px;padding-left:20px;display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ d.setup.limits }}" as="item" hint-placeholder-count="0">
+            <li style="font-size:14px;color:#5c5c5c;line-height:1.6">{{ item }}</li>
+          </sc-for>
+        </ul>
+        <sc-if value="{{ d.setup.mid }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 24px">{{ d.setup.mid }}</p>
+        </sc-if>
+        <div style="display:flex;gap:32px;margin-bottom:24px;flex-wrap:wrap">
+          <sc-for list="{{ d.setup.stats }}" as="stat" hint-placeholder-count="0">
+            <div>
+              <div style="font-size:30px;font-weight:600;color:#141313">{{ stat.value }}</div>
+              <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c;margin-top:4px">{{ stat.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ d.setup.close }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0">{{ d.setup.close }}</p>
+        </sc-if>
+      </section>
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Challenge</h2>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <sc-for list="{{ d.challenge }}" as="c" hint-placeholder-count="3">
+            <div>
+              <h3 style="font-size:17px;font-weight:600;color:#141313;margin:0 0 8px">{{ c.h }}</h3>
+              <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0">{{ c.p }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Persona</h2>
+        <sc-if value="{{ d.persona.kicker }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#5c5c5c;margin-bottom:8px">{{ d.persona.kicker }}</div>
+        </sc-if>
+        <sc-if value="{{ d.persona.label }}" hint-placeholder-val="{{ false }}">
+          <h3 style="font-size:20px;font-weight:600;color:#141313;margin:0 0 20px">{{ d.persona.label }}</h3>
+        </sc-if>
+
+        <sc-if value="{{ d.persona.hasFields }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;background:rgba(238,232,223,0.4);border-radius:12px;padding:20px;margin-bottom:28px">
+            <sc-for list="{{ d.persona.fields }}" as="f" hint-placeholder-count="5">
+              <div>
+                <div style="font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8b7355;margin-bottom:4px">{{ f.k }}</div>
+                <div style="font-size:13px;color:#141313;line-height:1.4">{{ f.v }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ d.persona.hasCols }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;margin-bottom:32px">
+            <sc-if value="{{ d.persona.hasGoals }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <h4 style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#141313;margin:0 0 12px">Goals</h4>
+                <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ d.persona.goals }}" as="g" hint-placeholder-count="3">
+                    <li style="font-size:13px;color:#5c5c5c;line-height:1.5">{{ g }}</li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-if>
+            <sc-if value="{{ d.persona.hasFrustrations }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <h4 style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#141313;margin:0 0 12px">Frustrations</h4>
+                <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ d.persona.frustrations }}" as="fr" hint-placeholder-count="4">
+                    <li style="font-size:13px;color:#5c5c5c;line-height:1.5">{{ fr }}</li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-if>
+            <sc-if value="{{ d.persona.hasNeeds }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <h4 style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#141313;margin:0 0 12px">Needs</h4>
+                <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ d.persona.needs }}" as="n" hint-placeholder-count="4">
+                    <li style="font-size:13px;color:#5c5c5c;line-height:1.5">{{ n }}</li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ d.persona.hasEmpathy }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c;margin-bottom:12px">{{ d.persona.empathyTitle }}</div>
+          <div style="overflow-x:auto;border:1px solid rgba(20,19,19,0.1);border-radius:12px">
+            <table style="border-collapse:collapse;width:100%;min-width:900px">
+              <thead>
+                <tr>
+                  <td style="padding:10px 14px;font-size:10px;font-weight:600;text-transform:uppercase;color:#8b7355;background:#eee8df;position:sticky;left:0;min-width:120px">Step</td>
+                  <sc-for list="{{ d.persona.empathySteps }}" as="step" hint-placeholder-count="10">
+                    <td style="padding:10px 14px;font-size:11px;font-weight:600;color:#141313;background:#f7f5f1;border-left:1px solid rgba(20,19,19,0.08);min-width:150px">{{ step }}</td>
+                  </sc-for>
+                </tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ d.persona.empathyRows }}" as="row" hint-placeholder-count="4">
+                  <tr>
+                    <td style="padding:10px 14px;font-size:11px;font-weight:600;text-transform:uppercase;color:#8b7355;background:#eee8df;position:sticky;left:0;vertical-align:top">{{ row.label }}</td>
+                    <sc-for list="{{ row.cells }}" as="cell" hint-placeholder-count="10">
+                      <td style="padding:10px 14px;font-size:12px;color:#5c5c5c;line-height:1.45;border-left:1px solid rgba(20,19,19,0.08);border-top:1px solid rgba(20,19,19,0.08);vertical-align:top">{{ cell }}</td>
+                    </sc-for>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ d.persona.note }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0;font-style:italic">{{ d.persona.note }}</p>
+        </sc-if>
+      </section>
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Research Synthesis</h2>
+        <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 12px">{{ d.research.lead }}</p>
+        <sc-if value="{{ d.research.sub }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 20px">{{ d.research.sub }}</p>
+        </sc-if>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <sc-for list="{{ d.research.items }}" as="it" hint-placeholder-count="0">
+            <div style="border-left:2px solid #c9b8a0;padding-left:16px">
+              <h4 style="font-size:15px;font-weight:600;color:#141313;margin:0 0 6px">{{ it.h }}</h4>
+              <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0">{{ it.p }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">User Flow</h2>
+        <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 24px">{{ d.userFlow.lead }}</p>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <sc-for list="{{ d.userFlow.steps }}" as="s" hint-placeholder-count="0">
+            <div style="border:1px solid rgba(20,19,19,0.1);border-radius:12px;padding:20px">
+              <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
+                <span style="font-size:13px;font-weight:600;color:#8b7355">{{ s.n }}</span>
+                <h4 style="font-size:17px;font-weight:600;color:#141313;margin:0">{{ s.title }}</h4>
+              </div>
+              <sc-if value="{{ s.does }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c;margin-bottom:4px">{{ s.doesLabel }}</div>
+                <p style="font-size:13px;color:#141313;line-height:1.5;margin:0 0 12px">{{ s.does }}</p>
+              </sc-if>
+              <sc-if value="{{ s.shows }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c;margin-bottom:4px">{{ s.showsLabel }}</div>
+                <p style="font-size:13px;color:#141313;line-height:1.5;margin:0">{{ s.shows }}</p>
+              </sc-if>
+              <sc-if value="{{ s.branch }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c;margin:12px 0 4px">Escalation</div>
+                <p style="font-size:13px;color:#5c5c5c;line-height:1.5;margin:0">{{ s.branch }}</p>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Design Exploration</h2>
+        <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 20px">{{ d.designExploration.lead }}</p>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <sc-for list="{{ d.designExploration.items }}" as="item" hint-placeholder-count="2">
+            <div style="background:#f7f5f1;border-radius:12px;padding:24px">
+              <sc-if value="{{ item.hasImage }}" hint-placeholder-val="{{ false }}">
+                <div style="border-radius:8px;overflow:hidden;margin-bottom:16px;background:#ffffff;border:1px solid rgba(20,19,19,0.08)">
+                  <img ref="{{ item.imgRef }}" alt="" style="width:100%;display:block"/>
+                </div>
+              </sc-if>
+              <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8b7355;margin-bottom:10px">{{ item.label }}</div>
+              <p style="font-size:14px;color:#141313;line-height:1.6;margin:0">{{ item.text }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Result</h2>
+        <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0 0 20px">{{ d.result.lead }}</p>
+        <div style="display:flex;gap:32px;flex-wrap:wrap">
+          <sc-for list="{{ d.result.badges }}" as="b" hint-placeholder-count="0">
+            <div style="display:inline-flex;align-items:center;gap:10px">
+              <span style="font-size:20px;font-weight:600;color:#141313">{{ b.value }}</span>
+              <span style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5c5c5c">{{ b.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section style="padding-bottom:96px">
+        <h2 style="font-size:30px;font-weight:600;color:#141313;margin:0 0 20px">Lesson Learned</h2>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <sc-for list="{{ d.lesson.items }}" as="l" hint-placeholder-count="0">
+            <div>
+              <sc-if value="{{ l.label }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8b7355;margin-bottom:10px">{{ l.label }}</div>
+              </sc-if>
+              <p style="font-size:14px;color:#5c5c5c;line-height:1.6;margin:0">{{ l.text }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;background:rgba(20,19,19,0.85);display:flex;align-items:center;justify-content:center;z-index:100;padding:40px;cursor:zoom-out">
+      <img ref="{{ lightboxRef }}" alt="" style="max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.4)"/>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: 'All', lightbox: null, view: 'home', detailIndex: 0, carouselIndex: 0 };
+  carouselTimer = null;
+
+  startCarousel(len) {
+    clearInterval(this.carouselTimer);
+    if (len > 1) {
+      this.carouselTimer = setInterval(() => {
+        this.setState((s) => ({ carouselIndex: (s.carouselIndex + 1) % len }));
+      }, 3500);
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.carouselTimer);
+  }
+
+  mortgageDetail = {
+    title: 'AI Mortgage Advisory Chat',
+    tag: 'Customer Experience',
+    meta: [
+      { k: 'ROLE', v: 'Sole Product Designer' },
+      { k: 'DURATION', v: '~4.5 months' },
+      { k: 'TEAM', v: 'PM, engineers, copywriter, data analyst' }
+    ],
+    images: [
+      { src: window.__resources.imgMortgageCarousel1, caption: 'Chat, comparison & simulator', captionDesc: 'The three core surfaces at a glance: the advisory chat, a side-by-side loan offer comparison, and the Loan Simulator with adjustable tenure and APR.' },
+      { src: window.__resources.imgMortgageFeature1, caption: 'Personalized quick-reply prompts', captionDesc: 'Non-authenticated users see the most-asked prompts; returning users instead see a pinned card resuming their last in-progress application.' },
+      { src: window.__resources.imgMortgageFeature2, caption: 'In-chat guided intake', captionDesc: 'Property price, type, income, and tenor are collected as quick-select chips inside the conversation, feeding straight into the affordability simulation.' },
+      { src: window.__resources.imgMortgageFeature3, caption: 'Loan comparison, expanded', captionDesc: 'Side-by-side bank offers expand on request into full tenor tables, year-by-year APR structure, and itemized fees.' },
+      { src: window.__resources.imgMortgageFeature4, caption: 'Affordability check & financial profile', captionDesc: 'A live slider flags "comfortable" vs. "limited room" outcomes as targets change, with the underlying financial profile editable inline.' },
+      { src: window.__resources.imgMortgageFeature5, caption: 'Document upload & verification', captionDesc: 'Guided ID upload with clear format requirements, followed by an editable confirmation screen auto-filled from the uploaded KTP.' }
+    ],
+    caption: 'Chat, comparison & simulator',
+    captionDesc: 'Quick-reply prompts, a side-by-side loan offer comparison, and the Loan Simulator panel with adjustable tenure and APR.',
+    tabs: ['Setup','Challenge','Persona','Research Synthesis','User Flow','Design Exploration','Result','Lesson Learned'],
+    setup: {
+      lead: 'Pillar needed to close two problems at once: an immediate ops cost problem, and a structural one that determined whether this could ever be more than a Ringkas-only tool.',
+      subLead: 'The ops case, pulled directly from product intake data:',
+      limits: [
+        '~125 inquiries/day reaching human agents — splitting into ~40/day repetitive advisory questions (product info, registration, application process, document upload, Akad) and ~85/day pure wrong-product deflection (customers asking about KTA, P2P, insurance — products Ringkas doesn\u2019t even sell).',
+        '~55 agent-hours/week, roughly 1.3 FTE — spent on volume that had either already been answered before or should never have reached a human at all.',
+        'A third, quieter loss: customers who reached "register to continue" in chat and didn\u2019t complete registration in the separate Consumer WebApp — a drop-off built into the handoff itself, not just an agent-hours problem.'
+      ],
+      mid: 'Underneath the numbers sits a structural ceiling no amount of agent training fixes: human advisory quality is gated by whichever agent happens to pick up, that ceiling doesn\u2019t move, and it can\u2019t personalize past a generic pitch at scale — while an AI conversation\u2019s baseline keeps improving with every iteration instead of plateauing. The two problems compound, not stack: solving the cost problem and the single-tenant lock-in in one build is what let Pillar turn this into a white-label product — a partner bank can now deploy this exact chat under their own brand instead of Ringkas building a bespoke one per bank.',
+      stats: [
+        { value: '~125/day', label: 'INQUIRIES REACHING HUMAN AGENTS' },
+        { value: '~55 hrs/wk', label: 'AGENT TIME, ~1.3 FTE' }
+      ],
+      close: 'This wasn\u2019t a simple deflection bot, either — it had to hold an actual financial conversation, in a market with no existing playbook for what trustworthy AI mortgage advice should sound like.'
+    },
+    challenge: [
+      { h: 'No existing mental model.', p: 'Almost no one in Indonesia had experienced mortgage advice inside a chat before — no competitor to benchmark, no prior project to inherit patterns from, and no cultural default for what trustworthy AI financial advice should sound like. Every interaction pattern — how much to ask, how to phrase a recommendation, when to sound human versus official — had to be originated, not adapted. Getting it wrong wouldn\u2019t just feel awkward; it would undermine the whole conversation\u2019s trust.' },
+      { h: 'Completeness vs. comprehension.', p: 'Legal completeness pushes toward showing everything; usability pushes toward showing only what\u2019s actionable. Holding that line against a more technical-leaning PM meant defending it on progressive disclosure — an established principle, just not one validated by research specific to this call.' },
+      { h: 'A genuinely new interaction shape.', p: 'This wasn\u2019t a pure chat interface or a pure functional tool — it had to be both, letting customers converse naturally while completing tasks (uploading documents, adjusting a repayment slider, confirming a simulation) without fracturing into "now you\u2019re chatting" versus "now you\u2019re filling a form." That meant deciding, case by case, when a functional element should surface versus stay conversational — judgment with no established playbook, since chat-plus-functional-UI is still new territory even outside Indonesia.' }
+    ],
+    persona: {
+      label: 'First-time buyer',
+      kicker: 'MORTGAGE WEBCHAT PERSONA',
+      hasFields: true,
+      fields: [
+        { k: 'AGE RANGE', v: 'Mid-20s–mid-30s' },
+        { k: 'OCCUPATION', v: 'Salaried, stable income' },
+        { k: 'TECH COMFORT', v: 'Hesitant, prefers human contact' },
+        { k: 'MOTIVATION', v: 'A life event (marriage, new baby)' },
+        { k: 'KEY TRAIT', v: 'Time-poor — limited availability for research, documents, or unclear waiting' }
+      ],
+      hasCols: true,
+      hasGoals: true,
+      goals: [
+        'Secure a home in time for the life event, without financial strain',
+        'Get a realistic affordability picture before getting attached to a house',
+        'Minimal disruption to a full work schedule'
+      ],
+      hasFrustrations: true,
+      frustrations: [
+        'Financial and legal jargon makes the process feel opaque',
+        'Chat-only interaction feels too risky for high-stakes decisions',
+        'No visibility into status during long waits',
+        'Document requirements feel like a moving target'
+      ],
+      hasNeeds: true,
+      needs: [
+        'Plain-language explanations of costs, terms, and requirements',
+        'Transparent, self-serve status tracking',
+        'A clear path to a human for high-stakes decisions',
+        'A process that respects limited time'
+      ],
+      hasEmpathy: true,
+      empathyTitle: 'EMPATHY MAP — THE JOURNEY FROM LOW INTENT TO APPLYING (SHIPPED CHAT COVERS STEPS 1–6)',
+      empathySteps: ['Looking for house','Installment and initial fee','Finding out requirements','Comparing loan programs','Pooling documents','Applying','Submit other docs','Tracking application status','Meet with notary','Akad day'],
+      empathyRows: [
+        { label: 'DO', cells: ['Browses listings casually, without a fixed budget','Searches for DP and installment info across banks','Checks document and eligibility lists; may self-check SLIK','Compares banks and programs manually, likely alone','Gathers KTP, NPWP, salary slips, bank statements from multiple sources','Submits the application and waits','Provides additional requested documents','Checks in by calling or visiting the bank for updates','Reviews and signs legal documents with the notary','Signs the final credit agreement in person'] },
+        { label: 'THINK', cells: ['"Can I actually afford this?"','"What does this mean for my finances?"','"Do I even qualify?"','"Which one is actually right for me?"','"Do I have everything they need?"','"It\u2019s out of my hands now"','"Why do they need more? I thought I was done"','"Is it approved yet?"','"I don\u2019t fully understand what I\u2019m signing"','"This is really happening"'] },
+        { label: 'FEEL', cells: ['Hopeful, motivated — but untethered','Sticker shock; confused by tenor, fixed vs. floating','Anxious about credit history, even if overblown','Overwhelmed by jargon; wants guidance, not just options','Fatigue and frustration','Relief mixed with lingering anxiety','Frustrated — feels like a moving target','Anxious uncertainty','Out of their depth','Relief and excitement, with last-minute nerves'] },
+        { label: 'UNMET NEEDS', cells: ['A grounded sense of real borrowing capacity before house hunting','Clear, personalized numbers instead of generic bank rates','Reassurance on eligibility before investing more emotion','Human-guided comparison of trade-offs, not raw options','A clear, fixed checklist that doesn\u2019t shift','Visibility into what\u2019s happening during the wait','Clear reasoning for why more documents are needed','Self-serve, real-time status without needing to ask','A human to walk through the legal paperwork','Confirmation everything is in order before the big moment'] }
+      ],
+      note: ''
+    },
+    research: {
+      lead: 'With no digital product to study, I used the human channel as the closest proxy: interviewing customers who\u2019d been through the manual version of this exact conversation — talking to a bank\u2019s own conversion staff — to reverse-engineer the flow and where people hesitated or dropped off. That became the insight base the mental model was built from.',
+      sub: 'To pressure-test what interviews alone couldn\u2019t confirm, I checked published research and applied general UX principles where research didn\u2019t exist:',
+      items: [
+        { h: 'A fixed, unambiguous checklist isn\u2019t just UX polish — it\u2019s rejection prevention.', p: 'Missing or unclear document requirements are one of the most common places a KYC flow loses people — vague formats (like "proof of address" with no guidance) force re-uploads, and every re-upload is a fresh chance to lose the customer. The checklist shows accepted formats with a good-vs-bad example, not a generic rejection message.' },
+        { h: 'NPWP gets validated in Phase 1, not buried later.', p: 'NPWP is a mandatory requirement with no exceptions at any Indonesian bank, used to verify tax and income validity — missing or invalid NPWP stalls applications at initial verification. It\u2019s checked early, before further effort into Phase 2.' },
+        { h: 'Human-in-the-loop isn\u2019t a fallback — it\u2019s a deliberate backstop.', p: 'Complex, multi-document processes lose people fastest at the moments they\u2019re most uncertain — a visible human option changes what happens at that moment. Escalation is a standing option at every step, framed as a designed path, not a patched-over gap.' },
+        { h: 'The interaction model borrows familiarity from WhatsApp, deliberately.', p: 'WhatsApp is the messaging app most Indonesians already use daily, for everything from casual chat to customer service — building the flow to read the same way lowers the guard most people bring to anything that looks like a form. The flow reads as a chat thread doing form-level work, not a form pretending to be a chat.' }
+      ]
+    },
+    userFlow: {
+      lead: 'The end-to-end journey moves through four stages — from an open-ended question to a submitted application. This is deliberately scoped to the pre-application funnel; document review, notary, and Akad signing stay manual and downstream.',
+      steps: [
+        { n: 1, title: 'Q&A', doesLabel: 'Customer does', does: 'Asks general questions about mortgages, loan programs, or their own financial situation.', showsLabel: 'Chat does / shows', shows: 'Answers conversationally and surfaces quick-reply prompts — personalized to whether the customer is new or has an application in progress — to guide toward a specific goal.', branch: null },
+        { n: 2, title: 'Simulation', doesLabel: 'Customer does', does: 'Provides property price, type, income, and preferred tenor; compares loan offers side by side.', showsLabel: 'Chat does / shows', shows: 'Runs the affordability check and loan comparison in real time, showing full APR structure and fees per bank offer.', branch: null },
+        { n: 3, title: 'Registration', doesLabel: 'Customer does', does: 'Confirms identity basics to move from general advisory into a tracked application.', showsLabel: 'Chat does / shows', shows: 'Creates the application record and transitions the customer into the document-collection stage.', branch: null },
+        { n: 4, title: 'Document Upload', doesLabel: 'Customer does', does: 'Uploads KTP, NPWP, KK, and supporting financial documents against a fixed checklist.', showsLabel: 'Chat does / shows', shows: 'Validates each document on submission, flags issues inline (wrong format, expired ID, incomplete statement), and surfaces human escalation on detected frustration — the point this mattered most, and where post-launch behavior confirmed the human backstop was doing its job.', branch: 'Escalation isn\u2019t tied to a specific stage — the AI surfaces a human option whenever it detects frustration signals, wherever the customer is in the flow. Document Upload is called out specifically because it was the one point designed pre-launch on the assumption that Indonesian users would need a human backstop most when handling identity documents — post-launch behavior confirmed it.' }
+      ]
+    },
+    designExploration: {
+      lead: 'Each of the four key moments in the flow went through three directions before landing on what shipped. Below is the shipped direction for each, with what got ruled out and why.',
+      items: [
+        { hasImage: true, imgSrc: window.__resources.imgMortgageExploreColdstart, label: 'COLD START — OPTION A, GUIDED QUICK-REPLY MENU', text: 'Shipped over a step-by-step onboarding sequence and a jump-straight-to-input version. Option A frames four common intents (check affordability, compare programs, continue an application, talk to a human) as tappable options instead of an open text field — the direct interface expression of the persona\u2019s need for plain-language framing, and consistent with the personalized quick-reply pattern already promised in the Hero Carousel.' },
+        { hasImage: true, imgSrc: window.__resources.imgMortgageExploreAffordability, label: 'AFFORDABILITY CALCULATOR — OPTION A, LIVE SLIDER WITH INSTANT ESTIMATE', text: 'Shipped over a multi-turn Q&A collecting the same two numbers, and a static form. Option A resolves the number fastest — no back-and-forth, nothing filled in blind — and keeps the chat behaving like a calculator instead of making the customer wait on a reply after every input.' },
+        { hasImage: true, imgSrc: window.__resources.imgMortgageExploreComparison, label: 'LOAN PROGRAM COMPARISON — OPTION B, SIDE-BY-SIDE TABLE, ESSENTIAL BY DEFAULT', text: 'This is where the "holding the line on customer language" decision plays out: when the PM pushed for showing complete loan program information up front, I argued for leading with numbers a non-expert can act on — rate, monthly estimate, down payment — across all three programs at once, with "Show complete details for all" as an opt-in expansion. It beat a single-card swipe view because side-by-side comparison is the actual task here; making someone swipe and hold numbers in memory to compare three offers works against the moment\u2019s goal.' },
+        { hasImage: true, imgSrc: window.__resources.imgMortgageExploreUpload, label: 'DOCUMENT UPLOAD — OPTION B, SUGGESTED PHASES, NOTHING LOCKED', text: 'Documents are grouped into three suggested phases (identity, income, additional) instead of one flat list of six — but every phase stays open and tappable at any time; the order is a suggestion, not a gate. This mattered because Research Synthesis already commits to "a fixed, unambiguous checklist that doesn\u2019t shift" — a version that locked later phases until earlier ones were done would have reintroduced the moving-target feeling the checklist was designed to prevent.' }
+      ]
+    },
+    result: {
+      lead: 'The chat is live and handling real conversations, but it\u2019s too early post-launch to report against the primary or secondary targets — need at least one full measurement window before trx/day and funnel completion numbers mean anything. One signal is already in: the Document Upload escalation backstop is performing as designed.',
+      badges: [
+        { value: 'Live', label: 'SHIPPED AND IN PRODUCTION' },
+        { value: '\u226530/day', label: 'TARGET TRX WITHIN 3 MONTHS' },
+        { value: '\u226560/day', label: 'TARGET TRX WITHIN 6 MONTHS' }
+      ]
+    },
+    lesson: {
+      items: [
+        { label: 'REFLECTION 1', text: 'Looking back, the one thing I\u2019d push harder for is text formatting in longer AI responses. Financial product information is dense by nature, and an unformatted wall of text is heavy to read when the topic is someone\u2019s mortgage — that\u2019s a fight worth having earlier next time.' },
+        { label: 'REFLECTION 2', text: 'I should\u2019ve pushed harder for usability testing on the genuinely new patterns. Chat-plus-functional-UI switching, frustration-triggered escalation, phased document collection — none of these had an existing playbook to validate against, in Indonesia or anywhere else. Next time I\u2019d push harder for even lightweight usability testing specifically on the novel parts of the flow, rather than relying on judgment alone where there was the least precedent to fall back on.' }
+      ]
+    }
+  };
+
+  designSystemDetail = {
+    title: 'Design System & Principles for a Multi-tenant AI Platform',
+    tag: 'Design System',
+    meta: [{ k: 'BUILT FROM', v: 'Zero' }],
+    images: [],
+    caption: 'The token system in action',
+    captionDesc: 'Logo and one primary color hex regenerate the full color scale and component set.',
+    tabs: ['Setup','Challenge','Persona','Research Synthesis','User Flow','Design Exploration','High Fidelity','Result','Lesson Learned'],
+    setup: { lead: 'Pillar started from a blank slate, with Ringkas positioning itself as a premium, trustworthy AI brand.', subLead: '', limits: [], mid: '', stats: [], close: '' },
+    challenge: [
+      { h: 'No shared visual or interaction language.', p: 'Every product risked looking and behaving like a different company, undermining the consistency and trust the brand needed to project.' }
+    ],
+    persona: {
+      label: 'Other designers & the products built on top of it',
+      kicker: 'WHO THIS SERVES',
+      hasFields: false, fields: [],
+      hasCols: false, hasGoals: false, goals: [], hasFrustrations: false, frustrations: [], hasNeeds: false, needs: [],
+      hasEmpathy: false, empathyTitle: '', empathySteps: [], empathyRows: [],
+      note: 'The \u2018users\u2019 of a design system are other designers and the products built on it, not end customers — no traditional persona was built for this stage.'
+    },
+    research: { lead: 'No formal synthesis exercise — the need was clear from the brand positioning gap itself.', sub: '', items: [] },
+    userFlow: { lead: 'Not applicable in the traditional sense — a design system doesn\u2019t have a single user flow.', steps: [] },
+    designExploration: {
+      lead: 'As design lead, I built the foundational layer myself — the infrastructure other people\u2019s work would come to depend on, not just a style guide.',
+      items: [
+        { hasImage: false, label: 'WHAT I BUILT', text: 'UI color scales, core components, and the interaction patterns other designers would build on top of. Other designers contributed under my review, with every component benchmarked and stress-tested against real usage before being considered stable.' }
+      ]
+    },
+    result: { lead: 'No standalone metric for the system itself — its impact shows up in what it enabled: the AI Mortgage Advisory Chat and the bank-partner console, both built and shipped on top of it.', badges: [] },
+    lesson: { items: [{ label: '', text: 'No specific reflection captured yet for the system itself.' }] }
+  };
+
+  consoleDetail = {
+    title: 'Console for Managing Bank Partners & Configuring Their AI Agents',
+    tag: 'Platform Tools',
+    meta: [{ k: 'BUILT FROM', v: 'Existing tool' }],
+    images: [
+      { src: window.__resources.imgConsoleCarousel1, caption: 'LLM Provider configuration', captionDesc: 'The Add Provider panel sits over the LLM Providers list — connecting a new model means naming it, picking a provider type and model, and supplying its API key.' },
+      { src: window.__resources.imgConsoleCarousel2, caption: 'Provider list & status', captionDesc: 'Every connected model in one table — provider, assigned agents, last modified, and a per-provider enable/disable toggle.' },
+      { src: window.__resources.imgConsoleCarousel3, caption: 'Provider detail & assigned agents', captionDesc: 'Drilling into a single provider surfaces its configuration, connection status, and every agent currently assigned to it.' }
+    ],
+    caption: 'No screenshots yet',
+    captionDesc: 'No screenshots of the final Portal UI included yet — add screens here when available.',
+    tabs: ['Setup','Challenge','Persona','Research Synthesis','User Flow','Design Exploration','High Fidelity','Result','Lesson Learned'],
+    setup: {
+      lead: 'Pillar wanted to turn years of accumulated mortgage domain knowledge and data into something the business could act on directly — LLM-powered AI agents that convert cold leads into warm ones for bank partners. Portal is the tool that makes that possible on the inside: where Pillar\u2019s internal team configures, tunes, and monitors those agents per partner, rather than the customer-facing product the agents produce.',
+      subLead: 'Giving Engineering, PM, Growth, and Ops teams that control meant a console to onboard bank partners, configure agent behavior per partner, and monitor how leads were being qualified.',
+      limits: [],
+      mid: 'But the earlier tool — with far more limited features — hadn\u2019t kept pace: as more partners came on, complexity grew unevenly, and the system stopped teaching people what each setting actually did as they used it. People guessed their way through configuration that directly affected which leads got contacted and how.',
+      stats: [], close: ''
+    },
+    challenge: [
+      { h: 'Cognitive load, not a missing feature.', p: 'The earlier tool wasn\u2019t self-explanatory, had weak information architecture, and didn\u2019t teach users what each feature did as they encountered it. People guessed their way through configuration — costing real onboarding time for new hires and slowing down how fast a new bank partner\u2019s AI agent could be set up.' },
+      { h: 'Technical, AI-specific territory for non-technical users.', p: 'Configuring an AI agent is inherently technical, but Portal\u2019s actual users — PM, Growth, and Ops — often aren\u2019t. Jargon they didn\u2019t recognize, in a domain they hadn\u2019t worked in before, made an already-unfamiliar task feel more nerve-wracking than it needed to be — especially since misconfiguring an agent has a live consequence on a real partner relationship, not just a UI mistake to undo.' },
+      { h: 'Complex features, complex interactions.', p: 'Beyond navigation, individual features weren\u2019t simple form-fills — several involved multi-step, branching configuration flows. The challenge wasn\u2019t only organizing where things lived, it was making genuinely complex interactions feel manageable to someone doing this for the first time.' }
+    ],
+    persona: {
+      label: 'Internal console users',
+      kicker: 'PORTAL USERS — FOUR ROLES, FOUR RISK PROFILES',
+      hasFields: false, fields: [],
+      hasCols: true,
+      hasGoals: true,
+      goals: [
+        'Get a new bank partner\u2019s agent live correctly, without routing every routine setup through engineering',
+        'Understand what a setting does before changing it, especially when it touches a live partner',
+        'Move through configuration confidently instead of guessing'
+      ],
+      hasFrustrations: false, frustrations: [],
+      hasNeeds: true,
+      needs: [
+        'In-context explanation of what a setting does before committing to a change',
+        'A clear signal for what\u2019s low-risk to touch versus what affects a live partner',
+        'A shared pattern across features, so learning one part of Portal transfers to the next'
+      ],
+      hasEmpathy: true,
+      empathyTitle: 'ROLES & RESPONSIBILITIES',
+      empathySteps: ['Engineering','PM','Growth Manager','Ops Manager'],
+      empathyRows: [
+        { label: 'TECHNICAL COMFORT', cells: ['High','Low–moderate','Low','Low'] },
+        { label: 'PRIMARY TASK', cells: ['Configures and maintains the underlying agent logic and integrations','Reviews agent performance and coordinates priorities across partners','Tunes agent conversation and conversion behavior per partner','Onboards new bank partners and monitors day-to-day account health'] },
+        { label: 'MAIN RISK IF WRONG', cells: ['A technical misconfiguration breaks agent behavior across multiple partners at once','Misreading a partner\u2019s setup leads to misaligned priorities or a delayed launch','A poorly tuned agent turns off leads or misrepresents a partner\u2019s brand voice','An onboarding error ships a partner\u2019s agent live with the wrong settings'] }
+      ],
+      note: ''
+    },
+    research: {
+      lead: 'No formal research round happened for Portal — the problem was identified directly from internal usage and complaints. To ground the redesign, I checked it against established UX practice rather than running new research:',
+      sub: '',
+      items: [
+        { h: 'Jargon comprehension is relative, not absolute.', p: 'Nielsen Norman Group\u2019s guidance on technical jargon notes that a term can be completely clear to one audience and unintelligible to another. That\u2019s exactly the gap between Engineering and the PM/Growth/Ops teams using Portal, and it\u2019s why explanations needed to live in the interface itself rather than assume shared vocabulary.' },
+        { h: 'Progressive disclosure is the established response to this kind of complexity.', p: 'Hiding advanced options until they\u2019re needed is a long-standing UX pattern for preventing cognitive overload in complex tools. It\u2019s why the redesign leaned on layering settings by relation, usage frequency, and sensitivity instead of surfacing everything at once.' },
+        { h: 'Structuring around how people think, not how the system is built.', p: 'NN/G\u2019s information architecture guidance points to matching structure to users\u2019 own mental models — via methods like card sorting — rather than organizing by internal system logic. That\u2019s the same instinct behind grouping Portal\u2019s settings by relation, usage frequency, and sensitivity rather than by how the underlying system happened to be built.' }
+      ]
+    },
+    userFlow: {
+      lead: 'Getting a new bank partner live moves through eight steps, with a test-and-revise loop before anything ships.',
+      steps: [
+        { n: 1, title: 'Onboard partner', doesLabel: 'What happens', does: 'Register the new bank partner in Portal.', showsLabel: '', shows: '', branch: null },
+        { n: 2, title: 'Upload knowledge docs', doesLabel: 'What happens', does: 'Feed the partner\u2019s product/lending info into the agent\u2019s knowledge base.', showsLabel: '', shows: '', branch: null },
+        { n: 3, title: 'Set up campaign/program', doesLabel: 'What happens', does: 'Configure which loan programs and campaigns the agent should represent.', showsLabel: '', shows: '', branch: null },
+        { n: 4, title: 'Set up cost', doesLabel: 'What happens', does: 'Configure pricing/cost parameters tied to the partner\u2019s programs.', showsLabel: '', shows: '', branch: null },
+        { n: 5, title: 'Test agent', doesLabel: 'What happens', does: 'Validate the agent\u2019s behavior before it\u2019s live.', showsLabel: '', shows: '', branch: 'If revision is needed, the agent is revised and re-tested in a loop until it passes.' },
+        { n: 6, title: 'Revise agent', doesLabel: 'What happens', does: 'Adjust configuration based on test results; loops back to Test agent.', showsLabel: '', shows: '', branch: null },
+        { n: 7, title: 'Deploy', doesLabel: 'What happens', does: 'Once testing passes, the agent goes live.', showsLabel: '', shows: '', branch: null },
+        { n: 8, title: 'Hand over to partner', doesLabel: 'What happens', does: 'Partner takes over day-to-day use of their live agent.', showsLabel: '', shows: '', branch: null }
+      ]
+    },
+    designExploration: {
+      lead: 'The restructure started with understanding the system before touching the interface, layering three lenses over every menu and feature.',
+      items: [
+        { hasImage: false, label: 'THE THREE LENSES', text: 'Relation — how every menu and feature actually related to each other. Usage frequency — what teams touch constantly versus rarely. Sensitivity — what handles risk-bearing data versus what doesn\u2019t. That three-part lens turned a pile of features into an information architecture with real logic. To make that IA hold as a shared language, I led the creation of design principles with my team here on Portal — a framework that originated in this project and was later adopted beyond Portal, into Pillar as a whole.' },
+        { hasImage: false, label: 'DECISION — EDUCATING, NOT JUST LABELING', text: 'Hover tooltips, information banners, and an "ask AI" entry point built directly into the interface, so a non-tech-savvy user encountering unfamiliar jargon isn\u2019t stuck guessing — an answer is one click away, in the moment it\u2019s needed. To hold consistency at this scale, I built master pages and screen patterns in Figma as the benchmark, then generated the rest of the system\u2019s pages with Claude Design based on each page\u2019s function — though the patterns weren\u2019t fully locked down before generation started, so keeping everything consistent meant a cleanup pass afterward.' }
+      ]
+    },
+    result: {
+      lead: 'No formal metrics yet, but informal feedback from PM, Growth, and Ops points to two concrete wins:',
+      badges: [
+        { value: 'Faster', label: 'NEW-HIRE ONBOARDING TIME' },
+        { value: 'Measurable', label: 'AGENT CHAT QUALITY, IN-TOOL' }
+      ]
+    },
+    lesson: { items: [{ label: 'REFLECTION', text: 'If I started Portal over, I\u2019d invest more upfront in UI patterns and master pages before generating pages with AI — it would have kept the AI-assisted ("vibe coded") output more consistent and under control from the start, rather than tightening it up after the fact.' }] }
+  };
+
+  wholesaleDetail = {
+    title: 'Wholesale Shopping & Discovery Experience for an E-Commerce Marketplace',
+    tag: 'Customer Experience',
+    meta: [{ k: 'PARTNER', v: 'UX Researcher' }],
+    images: [
+      { src: window.__resources.imgWholesaleCarousel1, caption: 'BukaGrosir entry point', captionDesc: 'The wholesale surface has its own homepage banner and app icon, leading straight into reseller-priced product carousels.' },
+      { src: window.__resources.imgWholesaleCarousel2, caption: 'Unpersonalized inspiration ground', captionDesc: 'For buyers with no purchase history yet, the Ground shows general best-seller and trending wholesale picks instead of a blank state.' },
+      { src: window.__resources.imgWholesaleCarousel3, caption: 'Trusted suppliers & wholesale picks', captionDesc: 'Below the recommendation carousels, the Ground surfaces trusted suppliers and category-wide wholesale picks.' },
+      { src: window.__resources.imgWholesaleCarousel4, caption: 'Personalized for a known reseller', captionDesc: "Once the system recognizes a buyer's category — here, fashion resale — the Ground reorders around their specific insight: matching suppliers and stock." },
+      { src: window.__resources.imgWholesaleCarousel5, caption: 'Homepage entry point', captionDesc: 'The main banner carousel and homepage menu grid both link into BukaGrosir, sitting alongside every other Bukalapak product.' },
+      { src: window.__resources.imgWholesaleCarousel6, caption: 'Flexi banner entry point', captionDesc: 'A secondary, more flexible placement highlights specific wholesale categories to trigger potential resellers.' },
+      { src: window.__resources.imgWholesaleCarousel7, caption: 'Search & listing entry points', captionDesc: "Popular-search suggestions and the \u201cGrosir\u201d filter on product listings both surface the BukaGrosir entry, catching buyers who already show wholesale intent." }
+    ],
+    caption: 'BukaGrosir — the shipped reseller & wholesale growth surface',
+    captionDesc: '',
+    tabs: ['Setup','Challenge','Persona','Research Synthesis','User Flow','Design Exploration','High Fidelity','Result','Lesson Learned'],
+    setup: {
+      lead: 'As Bukalapak expanded focus toward MITRA and resellers, data revealed a leak: roughly 20% of buyers in top categories were resellers or wholesale buyers, and 70% of them were sourcing products outside Bukalapak entirely.',
+      subLead: '', limits: [],
+      mid: 'The initiative shipped in two phases: a hygiene-flow fix first (Phase 1), then a discovery and inspiration layer on top (Phase 2).',
+      stats: [
+        { value: '20%', label: 'TOP-CATEGORY BUYERS ARE RESELLERS/WHOLESALE' },
+        { value: '70%', label: 'OF THOSE SOURCING OUTSIDE BUKALAPAK' }
+      ],
+      close: ''
+    },
+    challenge: [
+      { h: 'Phase 1 — The existing journey wasn\u2019t built for wholesale buyers.', p: 'Reviewing the wholesale buying journey found it inadequate for how these buyers actually shopped — which set the scope for two initiatives: creating a proper hygiene flow, and improving the wholesale products buying journey overall.' },
+      { h: 'Phase 2 — Fixing the flow didn\u2019t explain why buyers left.', p: 'The hygiene flow fix on its own didn\u2019t address why people were buying elsewhere in the first place. Answering that meant going deeper into who these buyers actually are and what they need.' }
+    ],
+    persona: {
+      label: 'Resellers & Crafters (main scope) · Servician & Pure Buyers (side scope)',
+      kicker: 'RESEARCH IDENTIFIED 4 TYPES OF WHOLESALE BUYERS (PHASE 2)',
+      hasFields: false, fields: [],
+      hasCols: false, hasGoals: false, goals: [], hasFrustrations: false, frustrations: [], hasNeeds: false, needs: [],
+      hasEmpathy: false, empathyTitle: '', empathySteps: [], empathyRows: [],
+      note: 'No persona work was scoped for the Phase 1 hygiene fix — persona research came in Phase 2, identifying 4 distinct types of wholesale buyers, with Resellers and Crafters set as the main design scope.'
+    },
+    research: {
+      lead: 'Phase 1 was scoped directly from the 20%/70% data point rather than a separate synthesis exercise. Phase 2 research surfaced behavioral findings that fed directly into the design brief.',
+      sub: 'Findings were organized into a WHO / WHAT / WOW affinity board, converging into "How Might We" statements for cross-functional alignment.',
+      items: []
+    },
+    userFlow: {
+      lead: 'The Phase 2 research converged into a full user flow mapping the reseller\u2019s journey from exploring what to sell through post-delivery, mapped across 5 stages — description, user needs, and pain points named at every stage.',
+      steps: []
+    },
+    designExploration: {
+      lead: 'With the blueprint\u2019s pain points as a brief, exploration started from a genuine open question: since many of these buyers had little to no data trail yet, could the Inspiration Ground work well even unpersonalized — before layering in personalization for buyers the system already understood?',
+      items: [
+        { hasImage: false, label: 'PHASE 1 — HYGIENE FLOW', text: 'Product listing & detail showing price ranges, since cheapest-price comparison drives wholesale decisions. Only 3 prices shown above the fold — reserving space for what mattered most in the comparison phase. That limit came directly from usability testing: people skim rather than read closely while comparing wholesale prices, so packing in more numbers just added noise.' },
+        { hasImage: true, imgSrc: window.__resources.imgWholesaleThumb, label: 'PHASE 2 — RESELLER\u2019S INSPIRATION GROUND', text: 'The shipped experience placed the Inspiration Ground as its own entry point — a dedicated "BukaGrosir" surface with its own banner and navigation, not buried inside the general marketplace homepage. The Ground renders one of two states depending on what the system knows about the buyer: an unauthenticated state showing general best-sellers, trending, and category-wide recommendations, and an authenticated state personalized to the buyer\u2019s shopping insight (e.g. fashion resellers).' }
+      ]
+    },
+    result: {
+      lead: 'Phase 1 improved wholesale PDP visits before Phase 2 shipped the primary result.',
+      badges: [
+        { value: '+8%', label: 'WHOLESALE PDP VISITS (PHASE 1, A/B TESTED)' },
+        { value: '+12%', label: 'WHOLESALE TRANSACTIONS (PHASE 2)' },
+        { value: '+22%', label: 'GMV ATTRIBUTION (PHASE 2)' }
+      ]
+    },
+    lesson: {
+      items: [
+        { label: 'LESSON FROM USABILITY TESTING', text: 'The 3-price limit above the fold came directly from UT: it showed people skim rather than read closely while comparing wholesale prices, so packing in more numbers just added noise. The same round of testing also surfaced a habit that shaped the cart design — people were adding items to cart just to simulate the final price, treating the cart as a pricing calculator, not necessarily purchase intent. That\u2019s why a "next cheaper price" nudge was added directly in cart, meeting that habit instead of fighting it.' }
+      ]
+    }
+  };
+
+  fashionDetail = {
+    title: 'Fashion Brand E-Commerce Website',
+    tag: 'Customer Experience',
+    meta: [{ k: 'TYPE', v: 'Direct client engagement' }, { k: 'STATUS', v: 'In development' }],
+    images: [
+      { src: window.__resources.imgFashionCarousel3, caption: 'Homepage & welcome offer', captionDesc: 'A first-order discount modal greets new visitors — the value-over-convenience play against Shopee\u2019s existing-account edge.' },
+      { src: window.__resources.imgFashionCarousel1, caption: 'Shop page', captionDesc: 'Category filters (pouches, pajamas, bestsellers, new arrivals) sit above a clean product grid with quick-add wishlist hearts.' },
+      { src: window.__resources.imgFashionCarousel2, caption: 'New arrivals', captionDesc: 'A horizontally scrollable row surfaces the newest pieces on the homepage, with a direct link into the full collection.' },
+      { src: window.__resources.imgFashionCarousel6, caption: 'Navigation', captionDesc: 'The Shop mega-menu breaks the catalog into Pouches and Pajamas sub-categories, with a seasonal editorial image alongside.' },
+      { src: window.__resources.imgFashionCarousel5, caption: 'Checkout', captionDesc: 'Checkout collects a WhatsApp number instead of requiring sign-in, with the order summary pinned alongside the delivery form.' },
+      { src: window.__resources.imgFashionCarousel4, caption: 'Order tracking', captionDesc: 'A self-serve tracking page shows courier, order status, and a step progress bar — plain-language status instead of a page customers have to remember to check.' }
+    ],
+    caption: 'Screenshots coming soon',
+    captionDesc: 'Screenshots from the live site (siena-made-website.vercel.app) go here — home, PDP, cart drawer.',
+    tabs: ['Setup','Challenge','Persona','Research Synthesis','User Flow','Design Exploration','High Fidelity','Result','Lesson Learned'],
+    setup: {
+      lead: 'The client sold through Shopee as their existing channel and had no standalone website — this project was to build one that runs alongside Shopee, not replace it.',
+      subLead: 'Three concerns were front-of-mind:',
+      limits: [
+        'Keep it simple so customers focus on shopping',
+        'Don\u2019t lose the traffic advantage Shopee already gave them',
+        'Let customers trust the process enough to actually buy on a site they\u2019d never used before'
+      ],
+      mid: '', stats: [], close: ''
+    },
+    challenge: [
+      { h: 'Shopee wins on friction, not loyalty.', p: 'Existing accounts, fewer clicks, constant promos. A new standalone site loses by default unless it\u2019s designed around that gap.' },
+      { h: 'No CMS — everything hardcoded.', p: 'Product info, pricing, and copy are all hardcoded directly into the build. Any update needs a developer, not something the client can do herself.' }
+    ],
+    persona: {
+      label: 'Loungewear & sleepwear shopper',
+      kicker: 'TARGET CUSTOMER (NO FORMAL PERSONA BUILT)',
+      hasFields: true,
+      fields: [
+        { k: 'AGE', v: 'Early 20s – early 30s' },
+        { k: 'CLASS', v: 'Middle-to-upper socioeconomic' },
+        { k: 'LIFESTYLE', v: 'Sophisticated, productive' },
+        { k: 'AESTHETIC', v: 'Girly aesthetic preference' }
+      ],
+      hasCols: false, hasGoals: false, goals: [], hasFrustrations: false, frustrations: [], hasNeeds: false, needs: [],
+      hasEmpathy: false, empathyTitle: '', empathySteps: [], empathyRows: [],
+      note: 'No formal persona was built for this solo freelance engagement — the client herself was the primary source of audience insight. Siena Made sells loungewear and sleepwear, so the customer\u2019s tendency to cherish, even romanticize, the unwind ritual before sleep isn\u2019t incidental — it\u2019s directly tied to the product category.'
+    },
+    research: { lead: 'Benchmarking was done using references the client provided, plus independent research of my own — informing the strategy below rather than a separate synthesis exercise.', sub: '', items: [] },
+    userFlow: {
+      lead: 'The shopping journey moves through five steps, from first browse to post-purchase tracking.',
+      steps: [
+        { n: 1, title: 'Browse', doesLabel: 'What happens', does: 'Customer explores the catalog.', showsLabel: '', shows: '', branch: null },
+        { n: 2, title: 'Product Detail Page', doesLabel: 'What happens', does: 'Views product details, pricing, and imagery.', showsLabel: '', shows: '', branch: null },
+        { n: 3, title: 'Cart', doesLabel: 'What happens', does: 'Reviews selected items before purchase.', showsLabel: '', shows: '', branch: null },
+        { n: 4, title: 'Checkout', doesLabel: 'What happens', does: 'Completes payment and order details.', showsLabel: '', shows: '', branch: null },
+        { n: 5, title: 'Order Tracking', doesLabel: 'What happens', does: 'Receives proactive WhatsApp updates on status changes instead of needing to check a tracking page.', showsLabel: '', shows: '', branch: null }
+      ]
+    },
+    designExploration: {
+      lead: 'The response was a full checkout-and-incentive strategy, not just a homepage:',
+      items: [
+        { hasImage: false, label: 'REMOVE FRICTION', text: 'Reframing order tracking into proactive updates instead of a page customers have to remember to check.' },
+        { hasImage: false, label: 'BEAT SHOPEE ON VALUE, NOT CONVENIENCE', text: 'Checkout without requiring sign-in, plus a discount for first-time orders.' },
+        { hasImage: false, label: 'FAST, RESPONSIVE CS', text: 'A sticky button for direct, immediate access to customer service.' },
+        { hasImage: false, label: 'DECISION — ORDER TRACKING, REFRAMED AS TRUST', text: 'Rather than a passive tracking page customers have to remember to check, the solution pushes proactive WhatsApp notifications on meaningful status changes — ordered, on the way, arrived — so the customer never has to go looking. The point was making them feel taken care of, not just informed.' }
+      ]
+    },
+    result: { lead: 'Still in development — launch metrics or client feedback to come once available.', badges: [] },
+    lesson: { items: [{ label: '', text: 'Nothing specific captured yet — the brief was straightforward with no major disagreements or surprises.' }] }
+  };
+
+  caseStudies = [
+    { tag: 'Customer Experience', title: 'AI Mortgage Advisory Chat', desc: 'A multi-tenant, regulation-bound AI sales chat — built for a customer decision with no existing local mental model to design against.', company: 'PILLAR LAB', image: window.__resources.imgMortgageCarousel1, comingSoon: false, detail: () => this.mortgageDetail },
+    { tag: 'Platform Tools', title: 'Console for Managing Bank Partners & Configuring Their AI Agents', desc: 'A large, complex internal console redesigned around information architecture and in-context guidance, for a non-tech-savvy internal team.', company: 'RINGKAS ASIA TECHNOLOGY', image: window.__resources.imgConsoleCarousel1, comingSoon: false, detail: () => this.consoleDetail },
+    { tag: 'Customer Experience', title: 'Wholesale Shopping & Discovery Experience for an E-Commerce Marketplace', desc: 'Fixing the wholesale buying flow first, then building the discovery layer on top — each phase shipped and measured.', company: 'BUKALAPAK', image: window.__resources.imgWholesaleCarousel1, comingSoon: false, detail: () => this.wholesaleDetail },
+    { tag: 'Customer Experience', title: 'Fashion Brand E-Commerce Website', desc: "A from-scratch e-commerce site designed to compete with Shopee on trust and value, not on Shopee's own terms of convenience.", company: 'SIENA MADE', image: window.__resources.imgFashionCarousel3, comingSoon: false, detail: () => this.fashionDetail },
+    { tag: 'Design System', title: 'Design System & Principles for a Multi-tenant AI Platform', desc: 'A component library and token system built from a blank slate, made to hold up as the shared foundation for every product built on top of it.', company: 'PILLAR LAB', image: null, comingSoon: true, detail: () => this.designSystemDetail }
+  ];
+
+  renderVals() {
+    const categories = ['All', 'Customer Experience', 'Platform Tools', 'Design System'];
+    const active = this.state.active;
+
+    const pills = categories.map((c) => {
+      const isActive = c === active;
+      return {
+        label: c,
+        onClick: () => this.setState({ active: c }),
+        style: isActive
+          ? 'background:#141313;color:#f7f5f1;border:1px solid #141313;'
+          : 'background:transparent;color:#5c5c5c;border:1px solid rgba(20,19,19,0.15);'
+      };
+    });
+
+    const filtered = this.caseStudies
+      .map((c, i) => ({ ...c, index: i }))
+      .filter((c) => active === 'All' || c.tag === active)
+      .map((c) => ({
+        ...c,
+        hasImage: !!c.image,
+        imgRef: (el) => { if (el && c.image) el.src = c.image; },
+        onClick: () => this.setState({ view: 'detail', detailIndex: c.index })
+      }));
+
+    const rawDetail = this.caseStudies[this.state.detailIndex]
+      ? this.caseStudies[this.state.detailIndex].detail()
+      : this.mortgageDetail;
+    const d = { ...rawDetail, hasMeta: !!(rawDetail.meta && rawDetail.meta.length) };
+
+    if (this._carouselLen !== d.images.length || this._carouselDetailIndex !== this.state.detailIndex) {
+      this._carouselLen = d.images.length;
+      this._carouselDetailIndex = this.state.detailIndex;
+      this.startCarousel(d.images.length);
+    }
+    const activeIdx = d.images.length ? this.state.carouselIndex % d.images.length : 0;
+    const activeImage = d.images[activeIdx];
+    const activeCarouselSrc = activeImage ? activeImage.src : '';
+    const activeCaption = activeImage ? activeImage.caption : d.caption;
+    const activeCaptionDesc = activeImage ? activeImage.captionDesc : d.captionDesc;
+    const carouselImgs = d.images.map((im, i) => ({
+      src: im.src,
+      ref: (el) => { if (el) el.src = im.src; },
+      onClick: () => this.setState({ carouselIndex: i }),
+      borderColor: i === activeIdx ? '#8b7355' : 'rgba(20,19,19,0.1)'
+    }));
+
+    d.designExploration = {
+      ...d.designExploration,
+      items: d.designExploration.items.map((item) => ({
+        ...item,
+        imgRef: (el) => { if (el && item.imgSrc) el.src = item.imgSrc; }
+      }))
+    };
+
+    return {
+      pills,
+      filtered,
+      lightboxOpen: !!this.state.lightbox,
+      lightboxRef: (el) => { if (el && this.state.lightbox) el.src = this.state.lightbox; },
+      closeLightbox: () => this.setState({ lightbox: null }),
+      isHome: this.state.view === 'home',
+      isDetail: this.state.view === 'detail',
+      goHome: () => this.setState({ view: 'home' }),
+      d,
+      carouselImgs,
+      activeCarouselSrc,
+      activeCaption,
+      activeCaptionDesc,
+      hasCarousel: d.images.length > 0,
+      noCarousel: d.images.length === 0
+    };
+  }
+}
+
+</script>
+</body>
+</html>
