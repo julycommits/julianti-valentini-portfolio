@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Julianti Valentini, Senior Product Designer</title>
-<meta name="description" content="Portfolio of Julianti Valentini, Senior Product Designer. B2B AI platforms, design systems, fintech and commerce. Open to remote and relocation.">
+<meta name="description" content="Portfolio of Julianti Valentini, Senior Product Designer. B2B AI platforms, design systems, fintech and commerce.">
 <meta property="og:title" content="Julianti Valentini, Senior Product Designer">
 <meta property="og:description" content="I design the system, then I design what runs on it. Case studies across AI platforms, design systems and commerce.">
 <meta property="og:type" content="website">
@@ -432,7 +432,7 @@ const CASES=[
  title:'Console for Managing Bank Partners & Configuring Their AI Agents',
  tag:'Internal Tools', company:'Pillar Lab',
  desc:'A large, complex internal console redesigned around information architecture and in-context guidance, for a mixed team, from engineers to non-technical Ops.',
- card:'assets/card-portal.webp',
+ card:'assets/card-portal.webp', cardPos:'center bottom',
  meta:[['Product','Pillar Portal'],['Built from','Existing tool'],['Users','Engineering, PM, Growth, Ops']],
  images:[
   ['assets/cover-portal.webp','Pillar Portal','The provider list with the Add Provider panel: one console where internal teams configure AI agents per bank partner.'],
@@ -687,7 +687,7 @@ const CASES=[
  title:'Design System & Shopping Journey for a Lifestyle Commerce App',
  tag:'Consumer Products', company:'The Fepi',
  desc:'A design system built from scratch and a data-led homepage revamp that drove a 3\u20135\u00d7 increase in purchase conversion.',
- card:'assets/card-fepi.webp',
+ card:'assets/card-fepi.webp', cardPos:'center bottom',
  meta:[['Role','Design Lead'],['Years','2022\u20132024'],['Employer','Ide Picup Group'],['Scope','Design system, homepage, listing and search, checkout']],
  images:[
   ['assets/cover-fepi.webp','Home, curated feed and product detail','The rebuilt journey at a glance: a data-led homepage, a feed curated per shopper, and a product page with benefit badges.'],
@@ -795,7 +795,7 @@ function block(b){
 const sec=(s,cls='sec')=>`<section class="${cls}" id="${s.id}" aria-labelledby="${s.id}-h">${cls==='sec'?`<h2 id="${s.id}-h">${s.title}</h2>`:`<h3 id="${s.id}-h">${s.title}</h3>`}<div class="body${s.blocks.some(b=>['journey','table'].includes(b.t))?' wide':''}">${s.blocks.map(block).join('')}</div></section>`;
 
 function contactBlock(){
- return `<section class="contact" id="contact" aria-labelledby="contact-h"><div class="eyebrow">Contact</div><h2 id="contact-h" style="margin-top:8px">Let’s talk about your product.</h2><p>Open to senior and lead product design roles, remote or with relocation. I work across B2B AI platforms, design systems, fintech and commerce.</p>
+ return `<section class="contact" id="contact" aria-labelledby="contact-h"><div class="eyebrow">Contact</div><h2 id="contact-h" style="margin-top:8px">Let’s talk about your product.</h2><p>Open to senior and lead product design roles. I work across B2B AI platforms, design systems, fintech and commerce.</p>
  <div class="contact-rows">
   <div class="contact-row"><span class="label">Email</span><a href="mailto:${EMAIL}" class="val">${EMAIL}</a><button class="copy" type="button" data-copy="${EMAIL}">Copy</button></div>
   <div class="contact-row"><span class="label">LinkedIn</span><a href="${LINKEDIN}" target="_blank" rel="noopener">linkedin.com/in/julianti-valentini-9089336b</a></div>
@@ -820,10 +820,10 @@ function renderHome(){
  document.title='Julianti Valentini, Senior Product Designer';
  const list=CASES.filter(c=>filter==='All'||c.tag===filter);
  app.innerHTML=`<div class="wrap">
-  <section class="hero"><div class="hero-text"><div class="kicker"><span>Senior Product Designer</span><span class="avail"><b></b>Open to remote and relocation</span></div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>10+ years across AI platforms, fintech and commerce, from user research to the system and the shipped UI.</p>
+  <section class="hero"><div class="hero-text"><div class="kicker"><span>Senior Product Designer</span></div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>10+ years across AI platforms, fintech and commerce, from user research to the system and the shipped UI.</p>
   <div class="proof"><div><b>3\u20135\u00d7</b><span>Purchase conversion</span></div><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Saudi launch</b><span>RTL product suite, solo</span></div></div></div></section>
   <div class="filters"><div class="pills" role="group" aria-label="Filter work by category">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
-  <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy">`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
+  <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy"${c.cardPos?` style="object-position:${c.cardPos}"`:''}>`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
   ${filter==='All'?moreBlock():''}
   ${contactBlock()}
  </div><footer class="foot"><div class="wrap">© 2026 Julianti Valentini</div></footer>`;
