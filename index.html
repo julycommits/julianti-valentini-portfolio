@@ -146,7 +146,7 @@ h1,h2,h3,h4{text-wrap:balance;margin:0;font-weight:600}
 .thumbs{display:flex;gap:8px;margin-top:12px;overflow-x:auto;padding:2px}
 .thumb{flex:0 0 auto;width:64px;height:36px;border-radius:6px;overflow:hidden;border:2px solid var(--rule);padding:0;cursor:pointer;background:var(--canvas)}
 .thumb[aria-current="true"]{border-color:var(--brown)}
-.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb img{width:100%;height:100%;object-fit:contain}
 .cap{margin-top:16px;max-width:720px}
 .cap h3{font-size:20px}
 .cap p{margin:6px 0 0;color:var(--muted);font-size:14px}
@@ -278,7 +278,7 @@ const CASES=[
  title:'Design System & Principles for a Multi-Tenant AI Platform',
  tag:'Design Systems', company:'Pillar Lab',
  desc:'A component library and token system built from a blank slate, made to hold up as the shared foundation for every product built on top of it.',
- card:'assets/ds-cover.webp',
+ card:'assets/card-ds.webp',
  meta:[['Role','Design lead'],['Built from','Zero'],['Covers','Conversational AI, customer apps, internal portals']],
  images:[
   ['assets/ds-cover.webp','Pillar Design System','One token set behind the conversational AI, customer apps and internal portals: color, type, components, feedback and conversation.'],
@@ -331,7 +331,7 @@ const CASES=[
  title:'AI Mortgage Advisory Chat',
  tag:'Consumer Products', company:'Pillar Lab',
  desc:'A multi-tenant, regulation-bound AI sales chat, built for a customer decision with no existing local mental model to design against.',
- card:'assets/cover-mortgage.webp',
+ card:'assets/card-mortgage.webp',
  meta:[['Role','Sole Product Designer'],['Duration','~4.5 months: 1 month design and PRD, 2–3 weeks edge cases, 3 months development'],['Team','PM, engineers, copywriter, data analyst']],
  images:[
   ['assets/cover-mortgage.webp','Chat, comparison & simulator','Quick-reply prompts, a side-by-side loan offer comparison, and the Loan Simulator panel with adjustable tenure and APR. Partner names and figures are anonymized.'],
@@ -432,7 +432,7 @@ const CASES=[
  title:'Console for Managing Bank Partners & Configuring Their AI Agents',
  tag:'Internal Tools', company:'Pillar Lab',
  desc:'A large, complex internal console redesigned around information architecture and in-context guidance, for a mixed team, from engineers to non-technical Ops.',
- card:'assets/cover-portal.webp',
+ card:'assets/card-portal.webp',
  meta:[['Product','Pillar Portal'],['Built from','Existing tool'],['Users','Engineering, PM, Growth, Ops']],
  images:[
   ['assets/console-carousel-1.webp','LLM provider configuration','The Add Provider panel sits over the LLM Providers list. Connecting a new model means naming it, picking a provider type and model, and supplying its API key.'],
@@ -500,7 +500,7 @@ const CASES=[
  title:'Wholesale Shopping & Discovery Experience for an E-Commerce Marketplace',
  tag:'Consumer Products', company:'Bukalapak',
  desc:'Fixing the wholesale buying flow first, then building the discovery layer on top. Each phase shipped and measured.',
- card:'assets/cover-bukalapak.webp',
+ card:'assets/card-bukalapak.webp',
  meta:[['Collaborated with','UX researcher'],['Shipped as','BukaGrosir'],['Result','+12% transactions, +22% GMV']],
  images:[
   ['assets/wholesale-carousel-1.webp','BukaGrosir entry point','The wholesale surface has its own homepage banner and app icon, leading straight into reseller-priced product carousels.'],
@@ -577,7 +577,7 @@ const CASES=[
  title:'Fashion Brand E-Commerce Website',
  tag:'Consumer Products', company:'Siena Made',
  desc:'A from-scratch e-commerce site designed to compete with Shopee on trust and value, not on Shopee’s own terms of convenience.',
- card:'assets/cover-siena.webp',
+ card:'assets/card-siena.webp',
  meta:[['Type','Direct client engagement'],['Status','In development'],['Scope','Strategy, design system, prototype']],
  images:[
   ['assets/fashion-carousel-3.webp','Homepage & welcome offer','A first-order discount modal greets new visitors: the value-over-convenience play against Shopee’s existing-account edge.'],
@@ -626,7 +626,7 @@ const CASES=[
  title:'White-Label Skin Configuration for a Multi-Tenant AI Chat',
  tag:'Internal Tools', company:'Pillar Lab',
  desc:'One brand color in, a full partner skin out. A configuration layer that lets Ops turn one AI chat into many branded ones, without design or engineering.',
- card:'assets/cover-skins.webp',
+ card:'assets/card-skins.webp',
  meta:[['Role','Lead Designer'],['Duration','3 days'],['Team','Designer, engineering']],
  images:[
   ['assets/wl-1-cover.webp','One chat, two partner skins','BSN (agent “Amanah”) and Mandiri (agent “Mandy”) running the same chat, configured from the same system.'],
@@ -683,7 +683,7 @@ const CASES=[
  title:'Design System & Shopping Journey for a Lifestyle Commerce App',
  tag:'Consumer Products', company:'The Fepi',
  desc:'A design system built from scratch and a data-led homepage revamp that drove a 3\u20135\u00d7 increase in purchase conversion.',
- card:'assets/cover-fepi.webp',
+ card:'assets/card-fepi.webp',
  meta:[['Role','Design Lead'],['Years','2022\u20132024'],['Employer','Ide Picup Group'],['Scope','Design system, homepage, listing and search, checkout']],
  images:[
   ['assets/cover-fepi.webp','Home, curated feed and product detail','The rebuilt journey at a glance: a data-led homepage, a feed curated per shopper, and a product page with benefit badges.'],
