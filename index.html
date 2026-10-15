@@ -682,9 +682,9 @@ const CASES=[
  slug:'the-fepi',
  title:'Design System & Shopping Journey for a Lifestyle Commerce App',
  tag:'Consumer Products', company:'The Fepi',
- desc:'A restyled component system and a rebuilt shopping journey, from homepage to checkout, shaped by how customers actually shop.',
+ desc:'A design system built from scratch and a data-led homepage revamp that drove a 3\u20135\u00d7 increase in purchase conversion.',
  card:'assets/cover-fepi.webp',
- meta:[['Scope','Design system, product card, homepage, listing and search, checkout'],['Platform','Mobile app']],
+ meta:[['Role','Design Lead'],['Years','2022\u20132024'],['Employer','Ide Picup Group'],['Scope','Design system, homepage, listing and search, checkout']],
  images:[
   ['assets/cover-fepi.webp','Home, curated feed and product detail','The rebuilt journey at a glance: a data-led homepage, a feed curated per shopper, and a product page with benefit badges.'],
   ['assets/fepi-home.webp','Homepage, rebuilt','Category shortcuts, a curated feed personalized per shopper, and new-arrival rails, rebuilt around shopping behavior data.'],
@@ -700,14 +700,21 @@ const CASES=[
    {t:'p',x:'The app\u2019s look wasn\u2019t connecting with the customers it wanted to reach, and the shopping journey hadn\u2019t caught up with new product types and delivery options.'},
    {t:'m',x:'The work ran in two layers: restyle the component system first, then rebuild the core shopping screens on top of it.'}
   ]},
+  {id:'role',title:'My Role',blocks:[
+   {t:'list',items:['Directed the design and creative vision across the company\u2019s product surfaces, setting the visual brand direction and building the design system from the ground up','Drove data-informed decisions in close collaboration with the research and data teams','Stepped into an interim PM role: facilitating cross-divisional workshops, delegating workstreams, and evaluating post-launch results against data']}
+  ]},
   {id:'designed',title:'What I Designed',blocks:[
    {t:'points',items:[
-    ['A restyled component system.','Thumbnails, avatars, quick filters, tags and buttons rebuilt to match the vibe the app\u2019s target customers respond to.'],
+    ['A design system built from scratch.','Components, icons and illustrations, restyled to match the vibe the app\u2019s target customers respond to and deployed consistently across all platforms and teams.'],
     ['Product cards that prioritize what shoppers need.','Information on cards and product detail reordered by what people use to decide, with variants for food and non-food, and badges that carry a real benefit: New, Ready stock, Pre-order.'],
-    ['A homepage built on shopping data.','The whole homepage reconstructed from insights and behavior data: category shortcuts, a curated feed per shopper, and new-arrival rails.'],
+    ['A homepage revamp built on shopping data.','Every section re-evaluated and rebuilt against research and user insights: category shortcuts, a curated feed per shopper, and new-arrival rails.'],
     ['Listing, search and brand home.','The same insights applied to product lists, search entry points and brand pages.'],
     ['A checkout that fits new product types.','The checkout flow reworked for changes in product type and delivery, with a clearer variant picker and ready-stock items grouped at checkout.']
    ]}
+  ]},
+  {id:'result',title:'Result',blocks:[
+   {t:'p',x:'The homepage revamp drove a 3\u20135\u00d7 increase in purchase conversion, one of the company\u2019s most impactful growth results. The design system became the shared library for every platform and team.'},
+   {t:'badges',items:[['3\u20135\u00d7','Purchase conversion, homepage revamp'],['From scratch','Design system across all platforms']]}
   ]}
  ]
 }
@@ -737,10 +744,10 @@ const TLDR={
   p:'20% of top-category buyers were resellers, and 70% of them sourced their stock outside Bukalapak.',
   c:'Fix the wholesale buying flow first, with a cart nudge that meets price-checking buyers where they are, then build a discovery layer that works even before there\u2019s data to personalize on.',
   o:'+8% wholesale PDP visits (A/B tested), then +12% wholesale transactions and +22% GMV.'},
- 'the-fepi':{out:'Design system to checkout',
+ 'the-fepi':{out:'3\u20135\u00d7 purchase conversion',
   p:'The app\u2019s look wasn\u2019t connecting with its target customers, and the journey hadn\u2019t caught up with new product types and delivery options.',
   c:'Restyle the component system first, then rebuild homepage, listing, search and checkout on top of it, ordered by what shoppers need to decide.',
-  o:'A restyled component set and redesigned core shopping screens, from homepage to checkout.'},
+  o:'A 3\u20135\u00d7 increase in purchase conversion from the homepage revamp, and one design system used across every platform and team.'},
  'siena-made':{out:'In development',
   p:'A brand selling only through Shopee needed its own site, competing against Shopee\u2019s convenience on day one.',
   c:'Compete on value and trust instead: guest checkout, a first-order discount, and proactive WhatsApp order updates.',
@@ -809,8 +816,8 @@ function renderHome(){
  document.title='Julianti Valentini, Senior Product Designer';
  const list=CASES.filter(c=>filter==='All'||c.tag===filter);
  app.innerHTML=`<div class="wrap">
-  <section class="hero"><div class="hero-text"><div class="kicker"><span>Senior Product Designer</span><span class="avail"><b></b>Open to remote and relocation</span></div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>AI platforms for mortgage and banking, the design system under them, and commerce before that.</p>
-  <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Live with Honda</b><span>White-label AI chat</span></div><div><b>3 days</b><span>Brand color to skin</span></div></div></div></section>
+  <section class="hero"><div class="hero-text"><div class="kicker"><span>Senior Product Designer</span><span class="avail"><b></b>Open to remote and relocation</span></div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>10+ years across AI platforms, fintech and commerce, from user research to the system and the shipped UI.</p>
+  <div class="proof"><div><b>3\u20135\u00d7</b><span>Purchase conversion</span></div><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Saudi launch</b><span>RTL product suite, solo</span></div></div></div></section>
   <div class="filters"><div class="pills" role="group" aria-label="Filter work by category">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
   <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy">`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
   ${filter==='All'?moreBlock():''}
