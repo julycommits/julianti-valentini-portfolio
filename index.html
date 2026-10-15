@@ -62,24 +62,40 @@ h1,h2,h3,h4{text-wrap:balance;margin:0;font-weight:600}
 .back span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Home */
-.hero{padding-block:64px 8px}
-.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.04;letter-spacing:-1.4px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;padding-block:56px 8px}
+.hero-text{min-width:0}
+.hero .kicker{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.hero h1{font-size:clamp(32px,3.6vw,46px);line-height:1.08;letter-spacing:-1px}
 .hero h1 em{font-style:normal;color:var(--brown)}
-.hero p{margin:22px 0 0;color:var(--muted);font-size:17px;line-height:1.6;max-width:600px}
-.proof{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--rule)}
-.proof div{padding:18px 20px 0 0;min-width:0}
-.proof div+div{padding-left:20px;border-left:1px solid var(--rule)}
-.proof b{display:block;font-size:22px;font-weight:600;letter-spacing:-0.3px;font-variant-numeric:tabular-nums}
-.proof span{display:block;font-size:13px;color:var(--muted);margin-top:4px;line-height:1.45}
-@media (max-width:640px){.proof{grid-template-columns:1fr}.proof div,.proof div+div{padding:14px 0;border-left:0;border-bottom:1px solid var(--rule)}}
+.hero p{margin:18px 0 0;color:var(--muted);font-size:16px;line-height:1.55;max-width:440px}
+.proof{display:grid;grid-template-columns:repeat(3,max-content);justify-content:start;gap:0;margin-top:28px}
+.proof div{padding:0 18px 0 0;min-width:0}
+.proof div+div{padding-left:18px;border-left:1px solid var(--rule)}
+.proof b{display:block;font-size:19px;font-weight:600;letter-spacing:-0.3px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.proof span{display:block;font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4;white-space:nowrap}
+.stack{position:relative;aspect-ratio:5/4;max-width:100%}
+.stack a{position:absolute;width:80%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--rule);background:var(--canvas);box-shadow:0 22px 44px -20px rgba(20,19,19,0.32);transition:transform .25s ease,box-shadow .25s ease}
+.stack a img{width:100%;height:100%;object-fit:cover}
+.stack a:nth-child(1){top:0;right:0;z-index:1}
+.stack a:nth-child(2){top:22%;left:10%;z-index:2}
+.stack a:nth-child(3){bottom:0;left:0;z-index:3}
+.stack a:hover{transform:translateY(-6px);box-shadow:0 30px 54px -22px rgba(20,19,19,0.38);z-index:4}
+.stack .cap{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,0.94);border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:600;color:var(--ink);opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
+.stack a:hover .cap,.stack a:focus-visible .cap{opacity:1;transform:none}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-block:40px 0}
+  .stack{width:100%;max-width:520px}
+  .hero p{max-width:none}
+}
+@media (max-width:640px){.proof{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:24px}.proof div{padding-right:12px}.proof div+div{padding-left:12px}.proof b{font-size:16px;white-space:normal;line-height:1.25}.proof span{white-space:normal;font-size:11.5px;margin-top:4px}}
 .card-foot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:18px}
 .card-foot .company{margin-top:0}
 .card-out{font-size:13px;font-weight:600;color:var(--ink)}
 .tldr{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px;padding-top:22px;border-top:1px solid var(--ink)}
 .tldr p{margin:8px 0 0;font-size:14.5px;line-height:1.55}
 @media (max-width:720px){.tldr{grid-template-columns:1fr;gap:18px}}
-.filters{padding-block:28px 0}
-.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
+.filters{padding-block:36px 0}
+.pills{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--rule)}
 .pill{padding:6px 16px;border-radius:999px;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--muted);border:1px solid rgba(20,19,19,0.15)}
 .pill[aria-pressed="true"]{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
 .cards{display:flex;flex-direction:column;gap:24px;padding-block:40px 72px}
@@ -253,13 +269,14 @@ const CASES=[
  title:'Design System & Principles for a Multi-Tenant AI Platform',
  tag:'Design Systems', company:'Pillar Lab',
  desc:'A component library and token system built from a blank slate, made to hold up as the shared foundation for every product built on top of it.',
- card:'assets/ds-slide-05.webp',
+ card:'assets/ds-cover.webp',
  meta:[['Role','Design lead'],['Built from','Zero'],['Covers','Conversational AI, customer apps, internal portals']],
  images:[
-  ['assets/ds-slide-05.webp','Shape encodes audience','Pill buttons for customers, rounded 8 for portals and internal tools. Only the radius differs, and the two never mix on one surface.'],
+  ['assets/ds-cover.webp','Pillar Design System','One token set behind the conversational AI, customer apps and internal portals: color, type, components, feedback and conversation.'],
   ['assets/ds-slide-02.webp','Color: four families, one job each','Plum acts. Oat holds the canvas. Neutral carries text and borders. Semantic colors report status, always with an icon and label.'],
   ['assets/ds-slide-03.webp','Typography','Figtree only. Eleven steps from display to caption, with tabular numerals for timestamps, IDs and data.'],
   ['assets/ds-slide-04.webp','Spacing, radius, elevation','A 4-based grid with 2 and 12 intermediates, radius assigned by role, and soft elevation that never gets heavy.'],
+  ['assets/ds-slide-05.webp','Shape encodes audience','Pill buttons for customers, rounded 8 for portals and internal tools. Only the radius differs, and the two never mix on one surface.'],
   ['assets/ds-slide-06.webp','Every state, designed up front','A component ships when its empty, focus, error and disabled states do. One text input, three parts, six states.'],
   ['assets/ds-slide-07.webp','Match the interruption to the stakes','Four feedback patterns ranked by how much they demand. Pick the quietest one that will still be read.'],
   ['assets/ds-slide-08.webp','Dense, for people who live in it','Internal portals trade breathing room for scan speed. Same tokens, tighter rhythm, rounded actions.'],
@@ -741,9 +758,10 @@ function renderHome(){
  document.title='Julianti Valentini, Senior Product Designer';
  const list=CASES.filter(c=>filter==='All'||c.tag===filter);
  app.innerHTML=`<div class="wrap">
-  <section class="hero"><h1>I design the system,<br>then I design <em>what runs on it.</em></h1><p>Senior Product Designer. I start from the business constraint, build the system that answers it, then design the product people actually touch. Currently on AI platforms for mortgage and banking; previously commerce at Bukalapak.</p>
-  <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale, after two shipped and measured phases</span></div><div><b>Live with Honda</b><span>White-label AI chat running under a partner’s own brand</span></div><div><b>3 days</b><span>From one brand color to a full partner skin, no engineering per skin</span></div></div></section>
-  <div class="filters"><div class="eyebrow" id="cat-l">Category</div><div class="pills" role="group" aria-labelledby="cat-l">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
+  <section class="hero"><div class="hero-text"><div class="kicker">Senior Product Designer \u00b7 Jakarta</div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>AI platforms for mortgage and banking, the design system under them, and commerce before that.</p>
+  <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Live with Honda</b><span>White-label AI chat</span></div><div><b>3 days</b><span>Brand color to skin</span></div></div></div>
+  <div class="stack" aria-label="Featured work">${['white-label-skins','mortgage-chat','design-system'].map(sl=>{const c=CASES.find(x=>x.slug===sl);return `<a href="#${c.slug}" aria-label="${esc(c.title)}"><img src="${c.card}" alt=""><span class="cap">${c.company}</span></a>`}).join('')}</div></section>
+  <div class="filters"><div class="pills" role="group" aria-label="Filter work by category">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
   <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy">`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
   ${contactBlock()}
  </div><footer class="foot"><div class="wrap">© 2026 Julianti Valentini</div></footer>`;
