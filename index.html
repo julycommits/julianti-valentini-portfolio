@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Julianti Valentini, Senior Product Designer</title>
-<meta name="description" content="Portfolio of Julianti Valentini, Senior Product Designer in Jakarta. B2B AI platforms, design systems, fintech and commerce.">
+<meta name="description" content="Portfolio of Julianti Valentini, Senior Product Designer. B2B AI platforms, design systems, fintech and commerce. Open to remote and relocation.">
 <meta property="og:title" content="Julianti Valentini, Senior Product Designer">
 <meta property="og:description" content="I design the system, then I design what runs on it. Case studies across AI platforms, design systems and commerce.">
 <meta property="og:type" content="website">
@@ -325,7 +325,7 @@ const CASES=[
  card:'assets/mortgage-carousel-1.webp',
  meta:[['Role','Sole Product Designer'],['Duration','~4.5 months: 1 month design and PRD, 2–3 weeks edge cases, 3 months development'],['Team','PM, engineers, copywriter, data analyst']],
  images:[
-  ['assets/mortgage-carousel-1.webp','Chat, comparison & simulator','Quick-reply prompts, a side-by-side loan offer comparison, and the Loan Simulator panel with adjustable tenure and APR.'],
+  ['assets/mortgage-carousel-1.webp','Chat, comparison & simulator','Quick-reply prompts, a side-by-side loan offer comparison, and the Loan Simulator panel with adjustable tenure and APR. Partner names and figures are anonymized.'],
   ['assets/mortgage-feature-1.webp','Personalized quick-reply prompts','Prompts adapt to who’s asking: most-asked questions for a new visitor, a pinned resume-progress card for someone mid-application.'],
   ['assets/mortgage-feature-2.webp','In-chat data collection','Structured step cards collect the inputs a real calculation needs, without pulling the user out of the conversation.'],
   ['assets/mortgage-feature-3.webp','Transparent loan breakdown','Full APR structure across the loan term, fees and charges, and program benefits shown per bank offer, not just a headline rate.'],
@@ -413,7 +413,7 @@ const CASES=[
   {id:'lesson',title:'Lesson Learned',blocks:[
    {t:'refl',items:[
     ['Reflection 1','Looking back, the one thing I’d push harder for is text formatting in longer AI responses. Financial product information is dense by nature, and an unformatted wall of text is heavy to read when the topic is someone’s mortgage. That’s a fight worth having earlier next time.'],
-    ['Reflection 2','I should’ve pushed harder for usability testing on the genuinely new patterns. Chat-plus-functional-UI switching, frustration-triggered escalation, phased document collection: none of these had an existing playbook to validate against, in Indonesia or anywhere else. Next time I’d push for even lightweight usability testing specifically on the novel parts of the flow, rather than relying on judgment alone where there was the least precedent to fall back on.']
+    ['Reflection 2','Usability testing covered the core flow, but not every pattern that was new. Chat-plus-functional-UI switching, frustration-triggered escalation and phased document collection had no existing playbook to validate against, in Indonesia or anywhere else. Next time I’d test those novel patterns first, even lightly, since that’s where judgment has the least precedent to lean on.']
    ]}
   ]}
  ]
@@ -422,7 +422,7 @@ const CASES=[
  slug:'pillar-portal',
  title:'Console for Managing Bank Partners & Configuring Their AI Agents',
  tag:'Internal Tools', company:'Pillar Lab',
- desc:'A large, complex internal console redesigned around information architecture and in-context guidance, for a non-tech-savvy internal team.',
+ desc:'A large, complex internal console redesigned around information architecture and in-context guidance, for a mixed team, from engineers to non-technical Ops.',
  card:'assets/console-carousel-1.webp',
  meta:[['Product','Pillar Portal'],['Built from','Existing tool'],['Users','Engineering, PM, Growth, Ops']],
  images:[
@@ -456,7 +456,7 @@ const CASES=[
    ]}
   ]},
   {id:'research',title:'Desk Research',blocks:[
-   {t:'m',x:'No formal research round happened for Portal; the problem was identified directly from internal usage and complaints. To ground the redesign, I checked it against established UX practice:'},
+   {t:'m',x:'The problem came straight from internal usage and complaints, so instead of a new research round I grounded the redesign in established UX practice:'},
    {t:'findings',items:[
     ['Jargon comprehension is relative, not absolute.','<a href="https://www.nngroup.com/articles/technical-jargon/" target="_blank" rel="noopener">Nielsen Norman Group’s guidance on technical jargon</a> notes that a term can be completely clear to one audience and unintelligible to another. That’s exactly the gap between Engineering and the PM, Growth and Ops teams using Portal, and it’s why explanations needed to live in the interface itself rather than assume shared vocabulary.',''],
     ['Progressive disclosure is the established response to this kind of complexity.','Hiding advanced options until they’re needed is a long-standing UX pattern for preventing cognitive overload in complex tools. It’s why the redesign leaned on layering settings by relation, usage frequency, and sensitivity instead of surfacing everything at once.',''],
@@ -549,7 +549,7 @@ const CASES=[
      ['Material Recommendation','Raw materials, for the Crafter buyer type','Same card layout for consistency, but demand count dropped: these needs come from the reseller’s own craft, not volume signals. Also flagged as needing a personalization algorithm.'],
      ['Potential Profit on Trending Products','Resale margin, not just demand','The version showing actual average sold price. More credible than a variant showing “highest price elsewhere,” since it’s proof someone already bought at that margin.']
     ]},
-    {t:'note',x:'The “more clicks” and “more impressions” reasoning above was an assumption carried from prior research patterns, not something measured in this rollout. It’s stated as a hypothesis, not proven fact.'}
+    {t:'note',x:'The “more clicks” and “more impressions” reasoning above was a hypothesis carried from prior research, not measured per module. What was measured is the full initiative: +12% wholesale transactions and +22% GMV attribution.'}
    ]},
    {id:'p2-hifi',title:'High Fidelity',blocks:[
     {t:'p',x:'The shipped experience placed the Inspiration Ground on its own dedicated “BukaGrosir” surface with its own banner and navigation, not buried inside the general marketplace homepage. Five entry points across the app let buyers discover it from wherever they already were:'},
@@ -693,7 +693,7 @@ const TLDR={
   o:'Faster new-hire onboarding, chat quality measurable in-tool for the first time, and principles adopted company-wide.'},
  'bukalapak-wholesale':{out:'+12% transactions \u00b7 +22% GMV',
   p:'20% of top-category buyers were resellers, and 70% of them sourced their stock outside Bukalapak.',
-  c:'Fix the wholesale buying flow first, then build a discovery layer that works even before there\u2019s data to personalize on.',
+  c:'Fix the wholesale buying flow first, with a cart nudge that meets price-checking buyers where they are, then build a discovery layer that works even before there\u2019s data to personalize on.',
   o:'+8% wholesale PDP visits (A/B tested), then +12% wholesale transactions and +22% GMV.'},
  'siena-made':{out:'In development',
   p:'A brand selling only through Shopee needed its own site, competing against Shopee\u2019s convenience on day one.',
@@ -738,10 +738,10 @@ function block(b){
 const sec=(s,cls='sec')=>`<section class="${cls}" id="${s.id}" aria-labelledby="${s.id}-h">${cls==='sec'?`<h2 id="${s.id}-h">${s.title}</h2>`:`<h3 id="${s.id}-h">${s.title}</h3>`}<div class="body${s.blocks.some(b=>['journey','table'].includes(b.t))?' wide':''}">${s.blocks.map(block).join('')}</div></section>`;
 
 function contactBlock(){
- return `<section class="contact" id="contact" aria-labelledby="contact-h"><div class="eyebrow">Contact</div><h2 id="contact-h" style="margin-top:8px">Let’s talk about your product.</h2><p>Open to senior and lead product design roles. Based in Jakarta, working across B2B AI platforms, design systems, fintech and commerce.</p>
+ return `<section class="contact" id="contact" aria-labelledby="contact-h"><div class="eyebrow">Contact</div><h2 id="contact-h" style="margin-top:8px">Let’s talk about your product.</h2><p>Open to senior and lead product design roles, remote or with relocation. I work across B2B AI platforms, design systems, fintech and commerce.</p>
  <div class="contact-rows">
   <div class="contact-row"><span class="label">Email</span><a href="mailto:${EMAIL}" class="val">${EMAIL}</a><button class="copy" type="button" data-copy="${EMAIL}">Copy</button></div>
-  <div class="contact-row"><span class="label">LinkedIn</span><a href="${LINKEDIN}" target="_blank" rel="noopener">linkedin.com/in/julianti-valentini</a></div>
+  <div class="contact-row"><span class="label">LinkedIn</span><a href="${LINKEDIN}" target="_blank" rel="noopener">linkedin.com/in/julianti-valentini-9089336b</a></div>
  </div></section>`;
 }
 
@@ -758,9 +758,9 @@ function renderHome(){
  document.title='Julianti Valentini, Senior Product Designer';
  const list=CASES.filter(c=>filter==='All'||c.tag===filter);
  app.innerHTML=`<div class="wrap">
-  <section class="hero"><div class="hero-text"><div class="kicker">Senior Product Designer \u00b7 Jakarta</div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>AI platforms for mortgage and banking, the design system under them, and commerce before that.</p>
+  <section class="hero"><div class="hero-text"><div class="kicker">Senior Product Designer \u00b7 Open to remote and relocation</div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>AI platforms for mortgage and banking, the design system under them, and commerce before that.</p>
   <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Live with Honda</b><span>White-label AI chat</span></div><div><b>3 days</b><span>Brand color to skin</span></div></div></div>
-  <div class="stack" aria-label="Featured work">${['white-label-skins','mortgage-chat','design-system'].map(sl=>{const c=CASES.find(x=>x.slug===sl);return `<a href="#${c.slug}" aria-label="${esc(c.title)}"><img src="${c.card}" alt=""><span class="cap">${c.company}</span></a>`}).join('')}</div></section>
+  <div class="stack" aria-label="Featured work">${['bukalapak-wholesale','mortgage-chat','design-system'].map(sl=>{const c=CASES.find(x=>x.slug===sl);return `<a href="#${c.slug}" aria-label="${esc(c.title)}"><img src="${c.card}" alt=""><span class="cap">${c.company}</span></a>`}).join('')}</div></section>
   <div class="filters"><div class="pills" role="group" aria-label="Filter work by category">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
   <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy">`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
   ${contactBlock()}
