@@ -62,32 +62,20 @@ h1,h2,h3,h4{text-wrap:balance;margin:0;font-weight:600}
 .back span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Home */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;padding-block:56px 8px}
+.hero{padding-block:52px 4px}
 .hero-text{min-width:0}
 .hero .kicker{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
 .avail{display:inline-flex;align-items:center;gap:7px;text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:500;color:var(--ink);background:var(--canvas);border:1px solid var(--rule);border-radius:999px;padding:4px 11px 4px 9px}
 .avail b{width:7px;height:7px;border-radius:50%;background:#2F8F5B;box-shadow:0 0 0 3px rgba(47,143,91,0.18)}
-.hero h1{font-size:clamp(32px,3.6vw,46px);line-height:1.08;letter-spacing:-1px}
+.hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-1.2px;max-width:760px}
 .hero h1 em{font-style:normal;color:var(--brown)}
-.hero p{margin:18px 0 0;color:var(--muted);font-size:16px;line-height:1.55;max-width:440px}
+.hero p{margin:16px 0 0;color:var(--muted);font-size:16px;line-height:1.55;max-width:560px}
 .proof{display:grid;grid-template-columns:repeat(3,max-content);justify-content:start;gap:0;margin-top:28px}
 .proof div{padding:0 18px 0 0;min-width:0}
 .proof div+div{padding-left:18px;border-left:1px solid var(--rule)}
 .proof b{display:block;font-size:19px;font-weight:600;letter-spacing:-0.3px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .proof span{display:block;font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4;white-space:nowrap}
-.stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:100%}
-.stack a{position:relative;display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--rule);background:var(--canvas);transition:border-color .2s ease}
-.stack a:first-child{grid-column:1/-1}
-.stack a img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
-.stack a:hover{border-color:rgba(20,19,19,0.25)}
-.stack a:hover img{transform:scale(1.03)}
-.stack .cap{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,0.94);border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:600;color:var(--ink);opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
-.stack a:hover .cap,.stack a:focus-visible .cap{opacity:1;transform:none}
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr;gap:36px;padding-block:40px 0}
-  .stack{width:100%;max-width:520px}
-  .hero p{max-width:none}
-}
+@media (max-width:640px){.hero{padding-block:40px 0}}
 @media (max-width:640px){.proof{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:24px}.proof div{padding-right:12px}.proof div+div{padding-left:12px}.proof b{font-size:16px;white-space:normal;line-height:1.25}.proof span{white-space:normal;font-size:11.5px;margin-top:4px}}
 .card-foot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:18px}
 .card-foot .company{margin-top:0}
@@ -95,7 +83,7 @@ h1,h2,h3,h4{text-wrap:balance;margin:0;font-weight:600}
 .tldr{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px;padding-top:22px;border-top:1px solid var(--ink)}
 .tldr p{margin:8px 0 0;font-size:14.5px;line-height:1.55}
 @media (max-width:720px){.tldr{grid-template-columns:1fr;gap:18px}}
-.filters{padding-block:36px 0}
+.filters{padding-block:32px 0}
 .pills{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--rule)}
 .pill{padding:6px 16px;border-radius:999px;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--muted);border:1px solid rgba(20,19,19,0.15)}
 .pill[aria-pressed="true"]{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
@@ -760,8 +748,7 @@ function renderHome(){
  const list=CASES.filter(c=>filter==='All'||c.tag===filter);
  app.innerHTML=`<div class="wrap">
   <section class="hero"><div class="hero-text"><div class="kicker"><span>Senior Product Designer</span><span class="avail"><b></b>Open to remote and relocation</span></div><h1>I design the system, then I design <em>what runs on it.</em></h1><p>AI platforms for mortgage and banking, the design system under them, and commerce before that.</p>
-  <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Live with Honda</b><span>White-label AI chat</span></div><div><b>3 days</b><span>Brand color to skin</span></div></div></div>
-  <div class="stack" aria-label="Featured work">${['bukalapak-wholesale','mortgage-chat','design-system'].map(sl=>{const c=CASES.find(x=>x.slug===sl);return `<a href="#${c.slug}" aria-label="${esc(c.title)}"><img src="${c.card}" alt=""><span class="cap">${c.company}</span></a>`}).join('')}</div></section>
+  <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Live with Honda</b><span>White-label AI chat</span></div><div><b>3 days</b><span>Brand color to skin</span></div></div></div></section>
   <div class="filters"><div class="pills" role="group" aria-label="Filter work by category">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
   <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy">`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
   ${contactBlock()}
