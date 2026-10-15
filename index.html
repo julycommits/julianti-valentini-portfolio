@@ -107,6 +107,20 @@ h1,h2,h3,h4{text-wrap:balance;margin:0;font-weight:600}
   .card-arrow{top:22px;right:20px}
 }
 
+/* More work */
+.more{border-top:1px solid var(--rule);padding-block:56px 64px}
+.more h2{font-size:30px;line-height:1.2;margin-top:8px}
+.more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px;margin-top:28px}
+.tile{margin:0;min-width:0}
+.tile button{all:unset;display:block;width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;border:1px solid var(--rule);background:var(--canvas);cursor:zoom-in}
+.tile button:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .4s ease}
+.tile button:hover img{transform:scale(1.03)}
+.tile figcaption{margin-top:14px}
+.tile h3{font-size:17px;margin-top:4px}
+.tile p{margin:6px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:640px){.more-grid{grid-template-columns:1fr}}
+
 /* Contact */
 .contact{border-top:1px solid var(--rule);padding-block:56px 72px}
 .contact h2{font-size:30px;line-height:1.2}
@@ -250,6 +264,12 @@ ol.list li::marker{color:var(--brown);font-weight:600}
 const EMAIL='julianti.valentini@gmail.com';
 const LINKEDIN='https://www.linkedin.com/in/julianti-valentini-9089336b';
 const CATS=['All','Consumer Products','Internal Tools','Design Systems'];
+const MORE=[
+ ['assets/more-seller.webp','Seller App, product management','Bukalapak','A dedicated seller app for managing products across Bukalapak and other sales channels. 65%+ adoption in phase 1.'],
+ ['assets/more-bl-home.webp','Homepage recommendations','Bukalapak','A personalized, infinite recommendation feed to lift visits from the homepage to product pages.'],
+ ['assets/more-bl-category.webp','Category landing pages','Bukalapak','Category pages shaped by how each category shops, like official stores first for smartphones.'],
+ ['assets/more-confexon.webp','Online exhibition platform','Confexon','Built end to end for three audiences: visitors, exhibitors and organizers.']
+];
 
 /* Content. Source of truth: Notion "PB Works". */
 const CASES=[
@@ -657,11 +677,44 @@ const CASES=[
    {t:'refl',items:[['Reflection','The palette is generated from whatever primary color a partner provides, but the system doesn’t check contrast. A light brand color like yellow would put white text on buttons that fail WCAG AA (4.5:1 for body text). Next time I’d build a contrast check into the generation step, either flagging the failure to Ops in the panel or auto-shifting the shade until text passes.']]}
   ]}
  ]
+},
+{
+ slug:'the-fepi',
+ title:'Design System & Shopping Journey for a Lifestyle Commerce App',
+ tag:'Consumer Products', company:'The Fepi',
+ desc:'A restyled component system and a rebuilt shopping journey, from homepage to checkout, shaped by how customers actually shop.',
+ card:'assets/cover-fepi.webp',
+ meta:[['Scope','Design system, product card, homepage, listing and search, checkout'],['Platform','Mobile app']],
+ images:[
+  ['assets/cover-fepi.webp','Home, curated feed and product detail','The rebuilt journey at a glance: a data-led homepage, a feed curated per shopper, and a product page with benefit badges.'],
+  ['assets/fepi-home.webp','Homepage, rebuilt','Category shortcuts, a curated feed personalized per shopper, and new-arrival rails, rebuilt around shopping behavior data.'],
+  ['assets/fepi-browse.webp','Listing, search and brand home','Product lists, search with recent, category, hot and brand entry points, and a brand home page built on the same insights.'],
+  ['assets/fepi-checkout.webp','Checkout journey','A variant picker for size, color and type, and a checkout that separates ready-stock items, reworked for new product types and delivery options.'],
+  ['assets/fepi-card.webp','Product card','What each card shows, by size and by food vs. non-food, prioritized by what shoppers need to decide, plus badges for New, Ready stock and Pre-order.'],
+  ['assets/fepi-ds-3.webp','Product card system','Compact, tall and horizontal card variants, add-to-cart and to-review cards, all from one set of rules.'],
+  ['assets/fepi-ds-1.webp','Components: thumbnails, filters and tags','Thumbnails, avatars, quick filters and tags restyled to match the look the app\u2019s target customers respond to.'],
+  ['assets/fepi-ds-2.webp','Components: buttons','Text, text and icon, icon-only and floating buttons with their sizes and states.']
+ ],
+ sections:[
+  {id:'setup',title:'Setup',blocks:[
+   {t:'p',x:'The app\u2019s look wasn\u2019t connecting with the customers it wanted to reach, and the shopping journey hadn\u2019t caught up with new product types and delivery options.'},
+   {t:'m',x:'The work ran in two layers: restyle the component system first, then rebuild the core shopping screens on top of it.'}
+  ]},
+  {id:'designed',title:'What I Designed',blocks:[
+   {t:'points',items:[
+    ['A restyled component system.','Thumbnails, avatars, quick filters, tags and buttons rebuilt to match the vibe the app\u2019s target customers respond to.'],
+    ['Product cards that prioritize what shoppers need.','Information on cards and product detail reordered by what people use to decide, with variants for food and non-food, and badges that carry a real benefit: New, Ready stock, Pre-order.'],
+    ['A homepage built on shopping data.','The whole homepage reconstructed from insights and behavior data: category shortcuts, a curated feed per shopper, and new-arrival rails.'],
+    ['Listing, search and brand home.','The same insights applied to product lists, search entry points and brand pages.'],
+    ['A checkout that fits new product types.','The checkout flow reworked for changes in product type and delivery, with a clearer variant picker and ready-stock items grouped at checkout.']
+   ]}
+  ]}
+ ]
 }
 ];
 
 /* Order tells one story: the system first, then what runs on it, then commerce. */
-const ORDER=['design-system','mortgage-chat','white-label-skins','pillar-portal','bukalapak-wholesale','siena-made'];
+const ORDER=['design-system','mortgage-chat','white-label-skins','pillar-portal','bukalapak-wholesale','the-fepi','siena-made'];
 CASES.sort((a,b)=>ORDER.indexOf(a.slug)-ORDER.indexOf(b.slug));
 const TLDR={
  'design-system':{out:'Base for the Mortgage Chat and Portal',
@@ -684,6 +737,10 @@ const TLDR={
   p:'20% of top-category buyers were resellers, and 70% of them sourced their stock outside Bukalapak.',
   c:'Fix the wholesale buying flow first, with a cart nudge that meets price-checking buyers where they are, then build a discovery layer that works even before there\u2019s data to personalize on.',
   o:'+8% wholesale PDP visits (A/B tested), then +12% wholesale transactions and +22% GMV.'},
+ 'the-fepi':{out:'Design system to checkout',
+  p:'The app\u2019s look wasn\u2019t connecting with its target customers, and the journey hadn\u2019t caught up with new product types and delivery options.',
+  c:'Restyle the component system first, then rebuild homepage, listing, search and checkout on top of it, ordered by what shoppers need to decide.',
+  o:'A restyled component set and redesigned core shopping screens, from homepage to checkout.'},
  'siena-made':{out:'In development',
   p:'A brand selling only through Shopee needed its own site, competing against Shopee\u2019s convenience on day one.',
   c:'Compete on value and trust instead: guest checkout, a first-order discount, and proactive WhatsApp order updates.',
@@ -734,6 +791,11 @@ function contactBlock(){
  </div></section>`;
 }
 
+function moreBlock(){
+ return `<section class="more" aria-labelledby="more-h"><div class="eyebrow">More work</div><h2 id="more-h">Earlier projects, in brief</h2>
+ <div class="more-grid">${MORE.map(([src,t,co,d])=>`<figure class="tile"><button type="button" data-zoom="${src}" aria-label="Enlarge: ${esc(t)}"><img src="${src}" alt="${esc(t)}" loading="lazy"></button><figcaption><div class="label">${co}</div><h3>${t}</h3><p>${d}</p></figcaption></figure>`).join('')}</div></section>`;
+}
+
 function renderHead(view){
  if(view==='home'){
   head.innerHTML=`<a class="brand" href="#work">Julianti Valentini</a><nav class="nav" aria-label="Main"><a href="#work" aria-current="page">Work</a><a href="#contact">Contact</a></nav>`;
@@ -751,6 +813,7 @@ function renderHome(){
   <div class="proof"><div><b>+22% GMV</b><span>Bukalapak wholesale</span></div><div><b>Live with Honda</b><span>White-label AI chat</span></div><div><b>3 days</b><span>Brand color to skin</span></div></div></div></section>
   <div class="filters"><div class="pills" role="group" aria-label="Filter work by category">${CATS.map(c=>`<button type="button" class="pill" aria-pressed="${c===filter}" data-cat="${c}">${c}</button>`).join('')}</div></div>
   <div class="cards">${list.map(c=>`<a class="card" href="#${c.slug}" id="card-${c.slug}"><div class="card-media">${c.card?`<img src="${c.card}" alt="" loading="lazy">`:`<div class="soon"><span class="tag">Preview coming soon</span></div>`}</div><div class="card-body"><span class="tag">${c.tag}</span><span class="card-arrow">${arrow}</span><h2>${c.title}</h2><p>${c.desc}</p><div class="card-foot"><div class="company">${c.company}</div>${TLDR[c.slug]?`<div class="card-out">${TLDR[c.slug].out}</div>`:''}</div></div></a>`).join('')}</div>
+  ${filter==='All'?moreBlock():''}
   ${contactBlock()}
  </div><footer class="foot"><div class="wrap">© 2026 Julianti Valentini</div></footer>`;
 }
